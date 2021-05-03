@@ -1,0 +1,211 @@
+{
+	"name": "John",
+	"children": [{
+			"name": "HR",
+			"children": [{
+					"name": "Performance",
+					"children": [{
+							"name": "Role",
+							"size": 3938
+						},
+						{
+							"name": "Promotions",
+							"size": 3812
+						}
+					]
+				},
+				{
+					"name": "Time-off",
+					"children": [{
+							"name": "Paid time off",
+							"size": 3938
+						},
+						{
+							"name": "Sick leave",
+							"size": 3812
+						},
+						{
+							"name": "Long leave",
+							"size": 6714
+						},
+						{
+							"name": "Seperation",
+							"size": 743
+						}
+					]
+				},
+				{
+					"name": "Travel",
+					"size": 3812
+				}
+			]
+		},
+		{
+			"name": "Project",
+			"children": [{
+					"name": "Role",
+					"size": 743
+				},
+				{
+					"name": "Activities",
+					"children": [{
+							"name": "Design",
+							"size": 3938
+						},
+						{
+							"name": "Requirement",
+							"size": 3812
+						},
+						{
+							"name": "HierarchicalCluster",
+							"size": 6714
+						},
+						{
+							"name": "MergeEdge",
+							"size": 743
+						}
+					]
+				},
+				{
+					"name": "Delivery Locations",
+					"children": [{
+							"name": "Atlanta",
+							"size": 3938
+						},
+						{
+							"name": "Chennai",
+							"size": 3812
+						},
+						{
+							"name": "Bangalore",
+							"size": 6714
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Skill",
+			"children": [{
+				"name": "cluster",
+				"children": [{
+						"name": "Java",
+						"size": 3938
+					},
+					{
+						"name": "Node",
+						"size": 3812
+					},
+					{
+						"name": "Dotnet",
+						"size": 6714
+					},
+					{
+						"name": "Python",
+						"size": 743
+					}
+				]
+			}]
+		},
+		{
+			"name": "Social",
+			"children": [{
+					"name": "Internal",
+					"children": [{
+							"name": "Yammer",
+							"size": 3938
+						},
+						{
+							"name": "Portals",
+							"size": 3812
+						},
+						{
+							"name": "Communities",
+							"size": 6714
+						}
+					]
+				},
+				{
+					"name": "External",
+					"children": [{
+							"name": "Facebook",
+							"size": 3938
+						},
+						{
+							"name": "Twitter",
+							"size": 3812
+						},
+						{
+							"name": "LinkedIn",
+							"size": 6714
+						},
+						{
+							"name": "Others",
+							"size": 743
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Assets",
+			"children": [{
+					"name": "Support",
+					"children": [{
+							"name": "Open",
+							"size": 3938
+						},
+						{
+							"name": "Closed",
+							"size": 3812
+						},
+						{
+							"name": "Pending",
+							"size": 6714
+						}
+					]
+				},
+				{
+					"name": "Hardware",
+					"children": [{
+							"name": "Laptop",
+							"size": 3938
+						},
+						{
+							"name": "Server",
+							"size": 3812
+						},
+						{
+							"name": "Desktop",
+							"size": 6714
+						},
+						{
+							"name": "Others",
+							"size": 743
+						}
+					]
+				},
+				{
+					"name": "Software",
+					"children": [{
+							"name": "IBM",
+							"size": 3938
+						},
+						{
+							"name": "Microsoft",
+							"size": 3812
+						},
+						{
+							"name": "SAP",
+							"size": 6714
+						},
+						{
+							"name": "Others",
+							"size": 743
+						}
+					]
+				}
+			]
+		}
+	]
+}

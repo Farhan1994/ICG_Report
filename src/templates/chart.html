@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>World population</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <div class="wrapper">
+
+      <canvas id="linechart" width="600" height="450"></canvas>
+
+    </div>
+
+    <script >
+      var ctx = document.getElementById("linechart").getContext("2d");
+      var linechart = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: {{ labels | safe }},
+          
+          datasets: [{
+              label: "accuracy",
+              
+              
+              data: {{ values | safe }}
+              
+            }
+          ]
+        },
+        options: {
+          responsive: false,
+          legend: { display: false },
+          title: {
+            display: false,
+            text: 'Predicted accuracy'
+          },
+          scales: {
+        xAxes: [ {
+          //type: 'time',
+          display: true,
+          scaleLabel: {
+            display: true,
+            labelString: 'Epoch'
+          },
+          ticks: {
+            major: {
+              fontStyle: 'bold',
+              fontColor: '#FF0000'
+            }
+          }
+        } ],
+        yAxes: [ {
+          display: true,
+          scaleLabel: {
+            display: true,
+            labelString: 'accuracy'
+          }
+        } ]
+      }  
+
+        }
+      });
+    </script>
+  </body>
+</html>

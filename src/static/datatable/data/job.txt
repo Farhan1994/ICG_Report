@@ -1,0 +1,1490 @@
+{
+    "data": [
+    {
+        "Job Plan": "016E18A",
+        "Description": "Discharge Monitoring Reports (DMRs), Annual",
+        "": "",
+        "Duration": "2:00",
+        "Priority": "0",
+        "Organization": "",
+        "Site": ""
+    },
+    {
+        "Job Plan": "1005",
+        "Description": "Clean and Inspect Bubble Cap Trays in SCOT Contactor",
+        "": "",
+        "Duration": "0:00",
+        "Priority": "0",
+        "Organization": "",
+        "Site": ""
+    },
+    {
+        "Job Plan": "1005",
+        "Description": "Clean and Inspect Bubble Cap Trays in SCOT Contactor",
+        "": "",
+        "Duration": "0:00",
+        "Priority": "0",
+        "Organization": "",
+        "Site": ""
+    },
+    {
+        "Job Plan": "1006",
+        "Description": "Monthly Aerial Cooler Inspection",
+        "": "",
+        "Duration": "0:00",
+        "Priority": "0",
+        "Organization": "",
+        "Site": ""
+    },
+    {
+        "Job Plan": "1007",
+        "Description": "Annual Inspection and Cleaning SCOT Quench H2O Tower",
+        "": "",
+        "Duration": "0:00",
+        "Priority": "1",
+        "Organization": "",
+        "Site": ""
+    },
+    {
+        "Job Plan": "1008",
+        "Description": "Megger Motor",
+        "": "",
+        "Duration": "1:00",
+        "Priority": "0",
+        "Organization": "",
+        "Site": ""
+    },
+    {
+        "Job Plan": "1009",
+        "Description": "Motor Heater Energized",
+        "": "",
+        "Duration": "0:30",
+        "Priority": "0",
+        "Organization": "",
+        "Site": ""
+    },
+    {
+        "Job Plan": "1010",
+        "Description": "Visual Inspection",
+        "": "",
+        "Duration": "0:30",
+        "Priority": "0",
+        "Organization": "",
+        "Site": ""
+    },
+    {
+        "Job Plan": "1011",
+        "Description": "Rotate Motor Shafts",
+        "": "",
+        "Duration": "0:30",
+        "Priority": "0",
+        "Organization": "",
+        "Site": ""
+    },
+    {
+        "Job Plan": "1012",
+        "Description": "Complete Air (OEPA DAPC Quarterly Report)",
+        "": "",
+        "Duration": "2:00",
+        "Priority": "0",
+        "Organization": "",
+        "Site": ""
+    },
+    {
+        "Job Plan": "1014",
+        "Description": "Perform Title V Semi Annual Report",
+        "": "",
+        "Duration": "3:00",
+        "Priority": "0",
+        "Organization": "",
+        "Site": ""
+    },
+    {
+        "Job Plan": "1015",
+        "Description": "Perform Mact SemiAnnual Report",
+        "": "",
+        "Duration": "2:00",
+        "Priority": "0",
+        "Organization": "",
+        "Site": ""
+    },
+    {
+        "Job Plan": "1017",
+        "Description": "Diesel Engine Refurbishment Procedure",
+        "": "",
+        "Duration": "0:00",
+        "Priority": "0",
+        "Organization": "",
+        "Site": ""
+    },
+    {
+        "Job Plan": "1017",
+        "Description": "Diesel Engine Maintenance Manual",
+        "": "",
+        "Duration": "0:00",
+        "Priority": "0",
+        "Organization": "",
+        "Site": ""
+    },
+    {
+        "Job Plan": "1020",
+        "Description": "Emergency Generator Overhaul",
+        "": "",
+        "Duration": "4:00",
+        "Priority": "8",
+        "Organization": "EAGLENA",
+        "Site": "BEDFORD"
+    },
+    {
+        "Job Plan": "1024",
+        "Description": "Electrical Job Plan",
+        "": "",
+        "Duration": "0:00",
+        "Priority": "0",
+        "Organization": "",
+        "Site": ""
+    },
+    {
+        "Job Plan": "1024",
+        "Description": "Electrical Job Plan",
+        "": "",
+        "Duration": "0:00",
+        "Priority": "0",
+        "Organization": "",
+        "Site": ""
+    },
+    {
+        "Job Plan": "1027",
+        "Description": "6 Month Check and PM",
+        "": "",
+        "Duration": "0:00",
+        "Priority": "0",
+        "Organization": "",
+        "Site": ""
+    },
+    {
+        "Job Plan": "1028",
+        "Description": "6 Month Flush Pump and Clean Valve",
+        "": "",
+        "Duration": "0:00",
+        "Priority": "0",
+        "Organization": "",
+        "Site": ""
+    },
+    {
+        "Job Plan": "1031",
+        "Description": "generic engine overhaul procedure",
+        "": "",
+        "Duration": "0:00",
+        "Priority": "0",
+        "Organization": "",
+        "Site": ""
+    },
+    {
+        "Job Plan": "12 MPH RED",
+        "Description": "Reduce speed to 12 MPH",
+        "": "",
+        "Duration": "0:00",
+        "Priority": "0",
+        "Organization": "",
+        "Site": ""
+    },
+    {
+        "Job Plan": "40 MPH RED",
+        "Description": "Reduce speed to 40 MPH",
+        "": "",
+        "Duration": "0:00",
+        "Priority": "0",
+        "Organization": "",
+        "Site": ""
+    },
+    {
+        "Job Plan": "401",
+        "Description": "Spot Patching",
+        "": "",
+        "Duration": "0:00",
+        "Priority": "0",
+        "Organization": "",
+        "Site": ""
+    },
+    {
+        "Job Plan": "427",
+        "Description": "Tractor Mowing",
+        "": "",
+        "Duration": "0:00",
+        "Priority": "0",
+        "Organization": "",
+        "Site": ""
+    },
+    {
+        "Job Plan": "761AF_JP",
+        "Description": "Airframes (AF) - tasks some in sched - sched windows",
+        "": "",
+        "Duration": "5:00",
+        "Priority": "0",
+        "Organization": "EAGLENA",
+        "Site": "BEDFORD"
+    },
+    {
+        "Job Plan": "761CABAUDI",
+        "Description": "Cabin Audio System Upgrade - tasks in schedule with dependancies",
+        "": "",
+        "Duration": "1:45",
+        "Priority": "0",
+        "Organization": "EAGLENA",
+        "Site": "BEDFORD"
+    },
+    {
+        "Job Plan": "761CABCATE",
+        "Description": "Cabin Food Heating System replacement - no Tasks",
+        "": "",
+        "Duration": "1:00",
+        "Priority": "0",
+        "Organization": "EAGLENA",
+        "Site": "BEDFORD"
+    },
+    {
+        "Job Plan": "761CABCREW",
+        "Description": "Cabin Crew Maintenance plan - tasks not in schedule",
+        "": "",
+        "Duration": "1:30",
+        "Priority": "0",
+        "Organization": "EAGLENA",
+        "Site": "BEDFORD"
+    },
+    {
+        "Job Plan": "761CONTR1",
+        "Description": "MRO Contract 1 - A Check",
+        "": "",
+        "Duration": "6:00",
+        "Priority": "0",
+        "Organization": "EAGLENA",
+        "Site": "BEDFORD"
+    },
+    {
+        "Job Plan": "761CONTR2",
+        "Description": "MRO Contract 2 - B Check",
+        "": "",
+        "Duration": "10:00",
+        "Priority": "0",
+        "Organization": "EAGLENA",
+        "Site": "BEDFORD"
+    },
+    {
+        "Job Plan": "761CONTR3",
+        "Description": "MRO Contract 3 - C Check",
+        "": "",
+        "Duration": "18:00",
+        "Priority": "0",
+        "Organization": "EAGLENA",
+        "Site": "BEDFORD"
+    },
+    {
+        "Job Plan": "761CONTR4",
+        "Description": "MRO Contract 4 - Special Request",
+        "": "",
+        "Duration": "3:00",
+        "Priority": "0",
+        "Organization": "EAGLENA",
+        "Site": "BEDFORD"
+    },
+    {
+        "Job Plan": "761CONTR5",
+        "Description": "MRO Contract 5 - PM 1600 flight hours",
+        "": "",
+        "Duration": "1:00",
+        "Priority": "0",
+        "Organization": "EAGLENA",
+        "Site": "BEDFORD"
+    },
+    {
+        "Job Plan": "761CONTR6",
+        "Description": "MRO Contract 6 - PM 2400 flight hours",
+        "": "",
+        "Duration": "2:00",
+        "Priority": "0",
+        "Organization": "EAGLENA",
+        "Site": "BEDFORD"
+    },
+    {
+        "Job Plan": "761CONTR7",
+        "Description": "MRO Contract 7 - Configuration Change",
+        "": "",
+        "Duration": "100:00:00",
+        "Priority": "0",
+        "Organization": "EAGLENA",
+        "Site": "BEDFORD"
+    },
+    {
+        "Job Plan": "761ENG_JP1",
+        "Description": "Engineering Job Plan 1 - no tasks - interruptable",
+        "": "",
+        "Duration": "15:00",
+        "Priority": "0",
+        "Organization": "EAGLENA",
+        "Site": "BEDFORD"
+    },
+    {
+        "Job Plan": "761ENG_JP2",
+        "Description": "Engineering JP 2 - appointment required - no tasks",
+        "": "",
+        "Duration": "2:00",
+        "Priority": "0",
+        "Organization": "EAGLENA",
+        "Site": "BEDFORD"
+    },
+    {
+        "Job Plan": "761_1_B767",
+        "Description": "CHECK L IDG OIL LEVEL AND SERVICE AS NEC",
+        "": "",
+        "Duration": "2:00",
+        "Priority": "0",
+        "Organization": "EAGLENA",
+        "Site": "BEDFORD"
+    },
+    {
+        "Job Plan": "761_2_B767",
+        "Description": "CHECK THE ENGINE 1 ENGINE STARTER OIL LE",
+        "": "",
+        "Duration": "3:00",
+        "Priority": "0",
+        "Organization": "EAGLENA",
+        "Site": "BEDFORD"
+    },
+    {
+        "Job Plan": "761_3_B767",
+        "Description": "LUBRICATE LEFT MAIN GEAR TRUCK PIVOT PIN",
+        "": "",
+        "Duration": "1:00",
+        "Priority": "0",
+        "Organization": "EAGLENA",
+        "Site": "BEDFORD"
+    },
+    {
+        "Job Plan": "761_A_B767",
+        "Description": "A Check - B767",
+        "": "",
+        "Duration": "4:00",
+        "Priority": "7",
+        "Organization": "EAGLENA",
+        "Site": "BEDFORD"
+    },
+    {
+        "Job Plan": "761_COST_1",
+        "Description": "CHECK L IDG PRES LEVEL AND SERVICE AS NEEED",
+        "": "",
+        "Duration": "8:00",
+        "Priority": "0",
+        "Organization": "EAGLENA",
+        "Site": "BEDFORD"
+    },
+    {
+        "Job Plan": "761_COST_2",
+        "Description": "CHECK PLANE IDG PRES LEVEL AND SERVICE",
+        "": "",
+        "Duration": "12:00",
+        "Priority": "0",
+        "Organization": "EAGLENA",
+        "Site": "BEDFORD"
+    },
+    {
+        "Job Plan": "761_COST_3",
+        "Description": "CHECK PLANE PS LEVEL AND SERVICE",
+        "": "",
+        "Duration": "12:00",
+        "Priority": "0",
+        "Organization": "EAGLENA",
+        "Site": "BEDFORD"
+    },
+    {
+        "Job Plan": "761_X_767",
+        "Description": "A CHECK B767 VP-BDI",
+        "": "",
+        "Duration": "7:00",
+        "Priority": "0",
+        "Organization": "EAGLENA",
+        "Site": "BEDFORD"
+    },
+    {
+        "Job Plan": "7623000",
+        "Description": "Kelly hose maintenance",
+        "": "",
+        "Duration": "2:00",
+        "Priority": "0",
+        "Organization": "",
+        "Site": ""
+    },
+    {
+        "Job Plan": "7623001",
+        "Description": "Mud Pump Service",
+        "": "",
+        "Duration": "1:30",
+        "Priority": "0",
+        "Organization": "",
+        "Site": ""
+    },
+    {
+        "Job Plan": "7623002",
+        "Description": "Mud Pump Liner Wash",
+        "": "",
+        "Duration": "1:30",
+        "Priority": "0",
+        "Organization": "",
+        "Site": ""
+    },
+    {
+        "Job Plan": "7623003",
+        "Description": "Mud Pump Drilling Fluid Cleanse",
+        "": "",
+        "Duration": "1:30",
+        "Priority": "0",
+        "Organization": "",
+        "Site": ""
+    },
+    {
+        "Job Plan": "7623004",
+        "Description": "Rotary table belt replacement",
+        "": "",
+        "Duration": "2:00",
+        "Priority": "0",
+        "Organization": "",
+        "Site": ""
+    },
+    {
+        "Job Plan": "7623005",
+        "Description": "Derrick Daily Inspection",
+        "": "",
+        "Duration": "0:30",
+        "Priority": "0",
+        "Organization": "",
+        "Site": ""
+    },
+    {
+        "Job Plan": "7623006",
+        "Description": "Derrick 90 day Maintenance",
+        "": "",
+        "Duration": "3:15",
+        "Priority": "0",
+        "Organization": "",
+        "Site": ""
+    },
+    {
+        "Job Plan": "7623008",
+        "Description": "Piston Ring Replacement",
+        "": "",
+        "Duration": "4:00",
+        "Priority": "0",
+        "Organization": "",
+        "Site": ""
+    },
+    {
+        "Job Plan": "7623009",
+        "Description": "Ram Blowout Preventers Daily Inspection",
+        "": "",
+        "Duration": "0:30",
+        "Priority": "0",
+        "Organization": "",
+        "Site": ""
+    },
+    {
+        "Job Plan": "7623010",
+        "Description": "Ram Blowout Preventers 7 day maintenance",
+        "": "",
+        "Duration": "1:00",
+        "Priority": "0",
+        "Organization": "",
+        "Site": ""
+    },
+    {
+        "Job Plan": "7623011",
+        "Description": "Ram Blowout Preventers 30 day maintenance",
+        "": "",
+        "Duration": "4:30",
+        "Priority": "0",
+        "Organization": "",
+        "Site": ""
+    },
+    {
+        "Job Plan": "7623012",
+        "Description": "Compressor maintenance",
+        "": "",
+        "Duration": "8:00",
+        "Priority": "0",
+        "Organization": "",
+        "Site": ""
+    },
+    {
+        "Job Plan": "7623013",
+        "Description": "Oil Rig Maintenance - General Inspection",
+        "": "",
+        "Duration": "2:00",
+        "Priority": "0",
+        "Organization": "",
+        "Site": ""
+    },
+    {
+        "Job Plan": "762801",
+        "Description": "Pump Maintenance",
+        "": "",
+        "Duration": "3:00",
+        "Priority": "0",
+        "Organization": "",
+        "Site": ""
+    },
+    {
+        "Job Plan": "762802",
+        "Description": "Tank Maintenance",
+        "": "",
+        "Duration": "4:00",
+        "Priority": "0",
+        "Organization": "",
+        "Site": ""
+    },
+    {
+        "Job Plan": "762803",
+        "Description": "Charcoal replacement",
+        "": "",
+        "Duration": "5:00",
+        "Priority": "0",
+        "Organization": "",
+        "Site": ""
+    },
+    {
+        "Job Plan": "762804",
+        "Description": "Filter Inspection and replacement",
+        "": "",
+        "Duration": "6:00",
+        "Priority": "0",
+        "Organization": "",
+        "Site": ""
+    },
+    {
+        "Job Plan": "764090",
+        "Description": "PM for location 764121",
+        "": "",
+        "Duration": "4:00",
+        "Priority": "3",
+        "Organization": "EAGLENA",
+        "Site": "BEDFORD"
+    },
+    {
+        "Job Plan": "764091",
+        "Description": "PM for location 764116",
+        "": "",
+        "Duration": "1:00",
+        "Priority": "3",
+        "Organization": "EAGLENA",
+        "Site": "BEDFORD"
+    },
+    {
+        "Job Plan": "764092",
+        "Description": "PM for location 764143",
+        "": "",
+        "Duration": "3:00",
+        "Priority": "3",
+        "Organization": "EAGLENA",
+        "Site": "BEDFORD"
+    },
+    {
+        "Job Plan": "764500",
+        "Description": "Meter Connect - Residential",
+        "": "",
+        "Duration": "0:30",
+        "Priority": "3",
+        "Organization": "",
+        "Site": ""
+    },
+    {
+        "Job Plan": "764501",
+        "Description": "Meter Connect - Transformer Rated",
+        "": "",
+        "Duration": "0:30",
+        "Priority": "3",
+        "Organization": "",
+        "Site": ""
+    },
+    {
+        "Job Plan": "764502",
+        "Description": "Meter Connect - 3-Phase",
+        "": "",
+        "Duration": "1:00",
+        "Priority": "3",
+        "Organization": "",
+        "Site": ""
+    },
+    {
+        "Job Plan": "764503",
+        "Description": "Meter Disconnect - Residential",
+        "": "",
+        "Duration": "0:30",
+        "Priority": "3",
+        "Organization": "",
+        "Site": ""
+    },
+    {
+        "Job Plan": "764504",
+        "Description": "Meter Disconnect - Transformer Rated",
+        "": "",
+        "Duration": "0:30",
+        "Priority": "3",
+        "Organization": "",
+        "Site": ""
+    },
+    {
+        "Job Plan": "764505",
+        "Description": "Meter Disconnect - 3-Phase",
+        "": "",
+        "Duration": "1:00",
+        "Priority": "3",
+        "Organization": "",
+        "Site": ""
+    },
+    {
+        "Job Plan": "764506",
+        "Description": "Meter Change",
+        "": "",
+        "Duration": "0:30",
+        "Priority": "3",
+        "Organization": "",
+        "Site": ""
+    },
+    {
+        "Job Plan": "764507",
+        "Description": "Meter Test",
+        "": "",
+        "Duration": "0:30",
+        "Priority": "3",
+        "Organization": "",
+        "Site": ""
+    },
+    {
+        "Job Plan": "764507",
+        "Description": "Meter Test",
+        "": "",
+        "Duration": "0:30",
+        "Priority": "3",
+        "Organization": "",
+        "Site": ""
+    },
+    {
+        "Job Plan": "764601",
+        "Description": "Wiring Inspection - Residential - stage 1",
+        "": "",
+        "Duration": "0:30",
+        "Priority": "3",
+        "Organization": "",
+        "Site": ""
+    },
+    {
+        "Job Plan": "764602",
+        "Description": "Wiring Inspection - Residential - stage 2",
+        "": "",
+        "Duration": "0:30",
+        "Priority": "3",
+        "Organization": "",
+        "Site": ""
+    },
+    {
+        "Job Plan": "764603",
+        "Description": "Wiring Inspection - Commercial - stage 1",
+        "": "",
+        "Duration": "0:30",
+        "Priority": "3",
+        "Organization": "",
+        "Site": ""
+    },
+    {
+        "Job Plan": "764604",
+        "Description": "Wiring Inspection - Commercial - stage 2",
+        "": "",
+        "Duration": "0:30",
+        "Priority": "3",
+        "Organization": "",
+        "Site": ""
+    },
+    {
+        "Job Plan": "764605",
+        "Description": "Wiring Inspection - Change of Service/Upgrade",
+        "": "",
+        "Duration": "1:00",
+        "Priority": "3",
+        "Organization": "",
+        "Site": ""
+    },
+    {
+        "Job Plan": "764606",
+        "Description": "Wiring Inspection - Electric Thermal Storage",
+        "": "",
+        "Duration": "1:00",
+        "Priority": "3",
+        "Organization": "",
+        "Site": ""
+    },
+    {
+        "Job Plan": "764607",
+        "Description": "Wiring Inspection - Fire Marshall Inspection Request",
+        "": "",
+        "Duration": "1:00",
+        "Priority": "3",
+        "Organization": "",
+        "Site": ""
+    },
+    {
+        "Job Plan": "764608",
+        "Description": "Wiring Inspection - Primary/Padmount Inspection",
+        "": "",
+        "Duration": "1:00",
+        "Priority": "3",
+        "Organization": "",
+        "Site": ""
+    },
+    {
+        "Job Plan": "764609",
+        "Description": "Wiring Inspection - Underground Service Inspection",
+        "": "",
+        "Duration": "2:00",
+        "Priority": "3",
+        "Organization": "",
+        "Site": ""
+    },
+    {
+        "Job Plan": "ANSI B30",
+        "Description": "Regulatory Crane Inspection",
+        "": "",
+        "Duration": "0:00",
+        "Priority": "0",
+        "Organization": "EAGLENA",
+        "Site": "BEDFORD"
+    },
+    {
+        "Job Plan": "APPLREQ",
+        "Description": "Application Request",
+        "": "",
+        "Duration": "0:00",
+        "Priority": "3",
+        "Organization": "",
+        "Site": ""
+    },
+    {
+        "Job Plan": "AUTOTRANS",
+        "Description": "Automatic Transmission Service",
+        "": "",
+        "Duration": "3:00",
+        "Priority": "2",
+        "Organization": "EAGLENA",
+        "Site": "FLEET"
+    },
+    {
+        "Job Plan": "BREAKINSP",
+        "Description": "Breaker Inspection",
+        "": "",
+        "Duration": "0:30",
+        "Priority": "0",
+        "Organization": "EAGLENA",
+        "Site": ""
+    },
+    {
+        "Job Plan": "BREAKINSP",
+        "Description": "Breaker Inspection",
+        "": "",
+        "Duration": "0:30",
+        "Priority": "0",
+        "Organization": "EAGLENA",
+        "Site": ""
+    },
+    {
+        "Job Plan": "BREAKOP",
+        "Description": "Operate Breaker",
+        "": "",
+        "Duration": "2:00",
+        "Priority": "0",
+        "Organization": "EAGLENA",
+        "Site": ""
+    },
+    {
+        "Job Plan": "BREAKOVER",
+        "Description": "Overhaul Breaker",
+        "": "",
+        "Duration": "8:00",
+        "Priority": "0",
+        "Organization": "EAGLENA",
+        "Site": ""
+    },
+    {
+        "Job Plan": "C555-1",
+        "Description": "Machine Check",
+        "": "",
+        "Duration": "0:00",
+        "Priority": "0",
+        "Organization": "",
+        "Site": ""
+    },
+    {
+        "Job Plan": "C555-1",
+        "Description": "Machine Check",
+        "": "",
+        "Duration": "0:00",
+        "Priority": "0",
+        "Organization": "",
+        "Site": ""
+    },
+    {
+        "Job Plan": "CAM1001",
+        "Description": "Standard Job Plan",
+        "": "",
+        "Duration": "14:00",
+        "Priority": "0",
+        "Organization": "EAGLENA",
+        "Site": "BEDFORD"
+    },
+    {
+        "Job Plan": "CONTINSP25",
+        "Description": "Container Inspection 2 1/2 year",
+        "": "",
+        "Duration": "0:00",
+        "Priority": "0",
+        "Organization": "",
+        "Site": ""
+    },
+    {
+        "Job Plan": "CONTINSP25",
+        "Description": "Container Inspection 2 1/2 year",
+        "": "",
+        "Duration": "0:00",
+        "Priority": "0",
+        "Organization": "",
+        "Site": ""
+    },
+    {
+        "Job Plan": "CONTINSP25",
+        "Description": "Container Inspection 3 year",
+        "": "",
+        "Duration": "0:00",
+        "Priority": "0",
+        "Organization": "",
+        "Site": ""
+    },
+    {
+        "Job Plan": "CONTINSP25",
+        "Description": "Container Inspection 3 year",
+        "": "",
+        "Duration": "0:00",
+        "Priority": "0",
+        "Organization": "",
+        "Site": ""
+    },
+    {
+        "Job Plan": "CONTINSP5",
+        "Description": "Container Inspection 5 year",
+        "": "",
+        "Duration": "0:00",
+        "Priority": "0",
+        "Organization": "",
+        "Site": ""
+    },
+    {
+        "Job Plan": "CONTINSP5",
+        "Description": "Container Inspection 5 year",
+        "": "",
+        "Duration": "0:00",
+        "Priority": "0",
+        "Organization": "",
+        "Site": ""
+    },
+    {
+        "Job Plan": "D-035",
+        "Description": "Baseline Water Well Testing",
+        "": "",
+        "Duration": "0:00",
+        "Priority": "0",
+        "Organization": "",
+        "Site": ""
+    },
+    {
+        "Job Plan": "DTE-1",
+        "Description": "DTE Energy Inspection 1",
+        "": "",
+        "Duration": "0:00",
+        "Priority": "0",
+        "Organization": "",
+        "Site": ""
+    },
+    {
+        "Job Plan": "DTE-1",
+        "Description": "DTE Energy Inspection 1",
+        "": "",
+        "Duration": "0:00",
+        "Priority": "0",
+        "Organization": "",
+        "Site": ""
+    },
+    {
+        "Job Plan": "DTE-1",
+        "Description": "DTE Energy Inspection 1",
+        "": "",
+        "Duration": "0:00",
+        "Priority": "0",
+        "Organization": "",
+        "Site": ""
+    },
+    {
+        "Job Plan": "ENGSERV",
+        "Description": "ENGINE SERVICE - SPF343 DECK",
+        "": "",
+        "Duration": "3:00",
+        "Priority": "1",
+        "Organization": "EAGLENA",
+        "Site": "FLEET"
+    },
+    {
+        "Job Plan": "INS-PC",
+        "Description": "PC Inspection",
+        "": "",
+        "Duration": "1:00",
+        "Priority": "3",
+        "Organization": "EAGLENA",
+        "Site": "BEDFORD"
+    },
+    {
+        "Job Plan": "INS-SUBSYS",
+        "Description": "General Inspection of Major Subsystems",
+        "": "",
+        "Duration": "3:00",
+        "Priority": "9",
+        "Organization": "EAGLENA",
+        "Site": "BEDFORD"
+    },
+    {
+        "Job Plan": "INS1002",
+        "Description": "Monthly Visual Portable Class A Fire Extinguisher Inspection",
+        "": "",
+        "Duration": "0:30",
+        "Priority": "0",
+        "Organization": "EAGLENA",
+        "Site": "BEDFORD"
+    },
+    {
+        "Job Plan": "INS1002",
+        "Description": "Fire Extinguisher Inspection",
+        "": "",
+        "Duration": "0:00",
+        "Priority": "0",
+        "Organization": "EAGLENA",
+        "Site": "BEDFORD"
+    },
+    {
+        "Job Plan": "INS1002",
+        "Description": "INSPECTION,FIRE EXTINGUISHER",
+        "": "",
+        "Duration": "0:30",
+        "Priority": "0",
+        "Organization": "EAGLENA",
+        "Site": "BEDFORD"
+    },
+    {
+        "Job Plan": "INS11200",
+        "Description": "HVAC System Inspection",
+        "": "",
+        "Duration": "2:30",
+        "Priority": "9",
+        "Organization": "EAGLENA",
+        "Site": "BEDFORD"
+    },
+    {
+        "Job Plan": "INS11300",
+        "Description": "Reciprocating Compressor Inspection",
+        "": "",
+        "Duration": "3:00",
+        "Priority": "9",
+        "Organization": "EAGLENA",
+        "Site": "BEDFORD"
+    },
+    {
+        "Job Plan": "INS11460",
+        "Description": "Burner Gas Fired Inspection",
+        "": "",
+        "Duration": "3:00",
+        "Priority": "9",
+        "Organization": "EAGLENA",
+        "Site": "BEDFORD"
+    },
+    {
+        "Job Plan": "INS12100",
+        "Description": "Electric Cart/Forklift Inspection",
+        "": "",
+        "Duration": "1:00",
+        "Priority": "7",
+        "Organization": "EAGLENA",
+        "Site": "BEDFORD"
+    },
+    {
+        "Job Plan": "INS12200",
+        "Description": "Overhead Crane Inspection",
+        "": "",
+        "Duration": "1:00",
+        "Priority": "7",
+        "Organization": "EAGLENA",
+        "Site": "BEDFORD"
+    },
+    {
+        "Job Plan": "INS13141",
+        "Description": "PKG Machine, Elevator & Drainpan Inspection",
+        "": "",
+        "Duration": "3:00",
+        "Priority": "9",
+        "Organization": "EAGLENA",
+        "Site": "BEDFORD"
+    },
+    {
+        "Job Plan": "INS15210",
+        "Description": "Inspect and Adjust Westinghouse Overcurrent Relay",
+        "": "",
+        "Duration": "1:00",
+        "Priority": "8",
+        "Organization": "EAGLENA",
+        "Site": "BEDFORD"
+    },
+    {
+        "Job Plan": "IT-ACC-DIS",
+        "Description": "Disable IT Accounts",
+        "": "",
+        "Duration": "0:00",
+        "Priority": "1",
+        "Organization": "",
+        "Site": ""
+    },
+    {
+        "Job Plan": "IT-ACC-NEW",
+        "Description": "Create IT Accounts",
+        "": "",
+        "Duration": "0:00",
+        "Priority": "2",
+        "Organization": "",
+        "Site": ""
+    },
+    {
+        "Job Plan": "IT-ISSUE",
+        "Description": "New Employee Asset Issue",
+        "": "",
+        "Duration": "0:00",
+        "Priority": "2",
+        "Organization": "EAGLENA",
+        "Site": ""
+    },
+    {
+        "Job Plan": "JP1000",
+        "Description": "Emergency Pipe Repair",
+        "": "",
+        "Duration": "5:00",
+        "Priority": "9",
+        "Organization": "EAGLENA",
+        "Site": "BEDFORD"
+    },
+    {
+        "Job Plan": "JP11210",
+        "Description": "Emergency Generator Overhaul",
+        "": "",
+        "Duration": "4:00",
+        "Priority": "8",
+        "Organization": "EAGLENA",
+        "Site": "BEDFORD"
+    },
+    {
+        "Job Plan": "JP11220",
+        "Description": "Electrical Panel Test",
+        "": "",
+        "Duration": "1:30",
+        "Priority": "9",
+        "Organization": "EAGLENA",
+        "Site": "BEDFORD"
+    },
+    {
+        "Job Plan": "JP11430",
+        "Description": "Centrifugal Pump Service- 12 Month",
+        "": "",
+        "Duration": "4:00",
+        "Priority": "0",
+        "Organization": "EAGLENA",
+        "Site": "TEXAS"
+    },
+    {
+        "Job Plan": "JP11430",
+        "Description": "Centrifugal Pump Service- 12 Month",
+        "": "",
+        "Duration": "3:00",
+        "Priority": "8",
+        "Organization": "EAGLENA",
+        "Site": "BEDFORD"
+    },
+    {
+        "Job Plan": "JP11430A",
+        "Description": "Centrifugal Pump Service- 3 Month",
+        "": "",
+        "Duration": "1:00",
+        "Priority": "8",
+        "Organization": "EAGLENA",
+        "Site": "BEDFORD"
+    },
+    {
+        "Job Plan": "JP12300",
+        "Description": "Electric Cart Tune-Up",
+        "": "",
+        "Duration": "1:00",
+        "Priority": "7",
+        "Organization": "EAGLENA",
+        "Site": "BEDFORD"
+    },
+    {
+        "Job Plan": "JP13110",
+        "Description": "Feeder System Service",
+        "": "",
+        "Duration": "2:00",
+        "Priority": "8",
+        "Organization": "EAGLENA",
+        "Site": "BEDFORD"
+    },
+    {
+        "Job Plan": "JP13140",
+        "Description": "Conveyor Belt 12 Month Service",
+        "": "",
+        "Duration": "4:00",
+        "Priority": "8",
+        "Organization": "EAGLENA",
+        "Site": "BEDFORD"
+    },
+    {
+        "Job Plan": "JP13140-R",
+        "Description": "CONVEYOR BELT FIX",
+        "": "",
+        "Duration": "3:00",
+        "Priority": "2",
+        "Organization": "EAGLENA",
+        "Site": "BEDFORD"
+    },
+    {
+        "Job Plan": "JP1314A",
+        "Description": "Conveyor Belt 3 Month Service",
+        "": "",
+        "Duration": "2:00",
+        "Priority": "9",
+        "Organization": "EAGLENA",
+        "Site": "BEDFORD"
+    },
+    {
+        "Job Plan": "JP1314R",
+        "Description": "CONVEYOR BELT FIX",
+        "": "",
+        "Duration": "3:00",
+        "Priority": "2",
+        "Organization": "EAGLENA",
+        "Site": "BEDFORD"
+    },
+    {
+        "Job Plan": "JP3004",
+        "Description": "CONVEYOR MOTOR REPAIRS IN SHIPPING",
+        "": "",
+        "Duration": "3:00",
+        "Priority": "2",
+        "Organization": "EAGLENA",
+        "Site": "BEDFORD"
+    },
+    {
+        "Job Plan": "JP37689",
+        "Description": "Ford Electrical Cart Overhaul",
+        "": "",
+        "Duration": "6:45",
+        "Priority": "20",
+        "Organization": "EAGLENA",
+        "Site": "BEDFORD"
+    },
+    {
+        "Job Plan": "JP50167",
+        "Description": "GM Electrical Cart Overhaul",
+        "": "",
+        "Duration": "6:45",
+        "Priority": "7",
+        "Organization": "EAGLENA",
+        "Site": "BEDFORD"
+    },
+    {
+        "Job Plan": "JP5467",
+        "Description": "Upgrade Order Processing Unit",
+        "": "",
+        "Duration": "6:15",
+        "Priority": "3",
+        "Organization": "EAGLENA",
+        "Site": "BEDFORD"
+    },
+    {
+        "Job Plan": "JP82544",
+        "Description": "Packaging Machine Inspection",
+        "": "",
+        "Duration": "3:00",
+        "Priority": "9",
+        "Organization": "EAGLENA",
+        "Site": "BEDFORD"
+    },
+    {
+        "Job Plan": "JP9004",
+        "Description": "Elevator Rail Fix",
+        "": "",
+        "Duration": "0:30",
+        "Priority": "9",
+        "Organization": "EAGLENA",
+        "Site": "BEDFORD"
+    },
+    {
+        "Job Plan": "JP9005",
+        "Description": "Chain Guide Fix",
+        "": "",
+        "Duration": "1:30",
+        "Priority": "9",
+        "Organization": "EAGLENA",
+        "Site": "BEDFORD"
+    },
+    {
+        "Job Plan": "JP92375",
+        "Description": "WINS and DHCP Maintenance",
+        "": "",
+        "Duration": "1:45",
+        "Priority": "12",
+        "Organization": "EAGLENA",
+        "Site": "BEDFORD"
+    },
+    {
+        "Job Plan": "JPCAL101",
+        "Description": "JP Calibration 1101",
+        "": "",
+        "Duration": "0:00",
+        "Priority": "0",
+        "Organization": "",
+        "Site": ""
+    },
+    {
+        "Job Plan": "JPCAL102",
+        "Description": "Calibration 102",
+        "": "",
+        "Duration": "0:00",
+        "Priority": "0",
+        "Organization": "",
+        "Site": ""
+    },
+    {
+        "Job Plan": "JPCAL103",
+        "Description": "Calibration 103",
+        "": "",
+        "Duration": "0:00",
+        "Priority": "0",
+        "Organization": "",
+        "Site": ""
+    },
+    {
+        "Job Plan": "JPCIRCFN",
+        "Description": "Circulation Fan Maintenance",
+        "": "",
+        "Duration": "0:00",
+        "Priority": "3",
+        "Organization": "",
+        "Site": ""
+    },
+    {
+        "Job Plan": "JPF-SER12",
+        "Description": "Mud Pump Service- 12 Month",
+        "": "",
+        "Duration": "3:00",
+        "Priority": "8",
+        "Organization": "EAGLENA",
+        "Site": "BEDFORD"
+    },
+    {
+        "Job Plan": "JPF-SER3",
+        "Description": "Mud Pump Service- 3 Month",
+        "": "",
+        "Duration": "1:00",
+        "Priority": "8",
+        "Organization": "EAGLENA",
+        "Site": "BEDFORD"
+    },
+    {
+        "Job Plan": "JPLOOP1",
+        "Description": "Calibration Loop 1",
+        "": "",
+        "Duration": "0:00",
+        "Priority": "0",
+        "Organization": "",
+        "Site": ""
+    },
+    {
+        "Job Plan": "JPMOLDA",
+        "Description": "MOLD REPAIRS",
+        "": "",
+        "Duration": "6:00",
+        "Priority": "2",
+        "Organization": "EAGLENA",
+        "Site": "BEDFORD"
+    },
+    {
+        "Job Plan": "JPMOLDA",
+        "Description": "Mold Repairs",
+        "": "",
+        "Duration": "6:00",
+        "Priority": "2",
+        "Organization": "EAGLENA",
+        "Site": "LAREDO"
+    },
+    {
+        "Job Plan": "JPOUTPR",
+        "Description": "Investigate Low/High Outlet Pressure",
+        "": "",
+        "Duration": "0:00",
+        "Priority": "2",
+        "Organization": "",
+        "Site": ""
+    },
+    {
+        "Job Plan": "NAV-PMA",
+        "Description": "NAVISTAR PMA",
+        "": "",
+        "Duration": "2:30",
+        "Priority": "0",
+        "Organization": "EAGLENA",
+        "Site": "FLEET"
+    },
+    {
+        "Job Plan": "PM1",
+        "Description": "PM for Sedan",
+        "": "",
+        "Duration": "0:00",
+        "Priority": "0",
+        "Organization": "EAGLENA",
+        "Site": "FLEET"
+    },
+    {
+        "Job Plan": "PMAFTL",
+        "Description": "PMA - Freightliner",
+        "": "",
+        "Duration": "0:00",
+        "Priority": "0",
+        "Organization": "EAGLENA",
+        "Site": "FLEET"
+    },
+    {
+        "Job Plan": "PMBFTL",
+        "Description": "PMB - Freightliner Inspection and Oil Change",
+        "": "",
+        "Duration": "0:00",
+        "Priority": "0",
+        "Organization": "EAGLENA",
+        "Site": "FLEET"
+    },
+    {
+        "Job Plan": "PMBULKTR",
+        "Description": "BULK TRAILER PM SERVICING",
+        "": "",
+        "Duration": "0:00",
+        "Priority": "0",
+        "Organization": "EAGLENA",
+        "Site": "FLEET"
+    },
+    {
+        "Job Plan": "PMCFTL",
+        "Description": "PMC - Freightliner DOT Inspection",
+        "": "",
+        "Duration": "0:00",
+        "Priority": "0",
+        "Organization": "EAGLENA",
+        "Site": "FLEET"
+    },
+    {
+        "Job Plan": "R-B-001",
+        "Description": "Rental - B Rental",
+        "": "",
+        "Duration": "0:00",
+        "Priority": "0",
+        "Organization": "EAGLENA",
+        "Site": "FLEET"
+    },
+    {
+        "Job Plan": "SDINSPCLN",
+        "Description": "SD Inspection and Cleaning Tower",
+        "": "",
+        "Duration": "168:00:00",
+        "Priority": "1",
+        "Organization": "",
+        "Site": ""
+    },
+    {
+        "Job Plan": "SS-1181",
+        "Description": "Compressor Inspection",
+        "": "",
+        "Duration": "0:00",
+        "Priority": "0",
+        "Organization": "",
+        "Site": ""
+    },
+    {
+        "Job Plan": "SS-1181",
+        "Description": "Compressor Inspection",
+        "": "",
+        "Duration": "0:00",
+        "Priority": "0",
+        "Organization": "",
+        "Site": ""
+    },
+    {
+        "Job Plan": "TKPMA",
+        "Description": "Fuel Tank Minor Inspection",
+        "": "",
+        "Duration": "0:00",
+        "Priority": "2",
+        "Organization": "EAGLENA",
+        "Site": "FLEET"
+    },
+    {
+        "Job Plan": "TKPMB",
+        "Description": "Fuel Tank Intermediate Inspection",
+        "": "",
+        "Duration": "0:00",
+        "Priority": "2",
+        "Organization": "EAGLENA",
+        "Site": "FLEET"
+    },
+    {
+        "Job Plan": "TKPMC",
+        "Description": "Fuel Tank Certification Inspection",
+        "": "",
+        "Duration": "0:00",
+        "Priority": "2",
+        "Organization": "EAGLENA",
+        "Site": "FLEET"
+    },
+    {
+        "Job Plan": "TRINPSDOT",
+        "Description": "TRAILER INSPECTION - MINOR & DOT",
+        "": "",
+        "Duration": "5:00",
+        "Priority": "2",
+        "Organization": "EAGLENA",
+        "Site": "FLEET"
+    },
+    {
+        "Job Plan": "TRINSP",
+        "Description": "TRAILER INSPECTION - MINOR",
+        "": "",
+        "Duration": "0:00",
+        "Priority": "2",
+        "Organization": "EAGLENA",
+        "Site": "FLEET"
+    },
+    {
+        "Job Plan": "TRYCLNINSP",
+        "Description": "Tray Cleaning and Inspection",
+        "": "",
+        "Duration": "168:00:00",
+        "Priority": "1",
+        "Organization": "EAGLENA",
+        "Site": "GASCO"
+    }
+   
+]
+}

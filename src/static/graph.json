@@ -1,0 +1,761 @@
+{
+	"nodes": [{
+			"id": 0,
+			"name": "Junctions",
+			"group": 1
+		}, {
+			"id": "1",
+			"name": "Reservoirs",
+			"group": 2
+		}, {
+			"id": 2,
+			"name": "Tanks",
+			"group": 2
+		}, {
+			"id": 3,
+			"name": "Pipes",
+			"group": 2
+		}, {
+			"id": 4,
+			"name": "Pumps",
+			"group": 2
+		}, {
+			"id": 5,
+			"name": "Valves",
+			"group": 2
+		}, {
+			"id": 6,
+			"name": "Demand",
+			"group": 3
+		}, {
+			"id": 7,
+			"name": "Status",
+			"group": 3
+		}, {
+			"id": 8,
+			"name": "Patterns",
+			"group": 3
+		}, {
+			"id": 9,
+			"name": "Curves",
+			"group": 4
+		}, {
+			"id": 10,
+			"name": "Controls",
+			"group": 4
+		}, {
+			"id": 11,
+			"name": "Rules",
+			"group": 5
+		}, {
+			"id": 12,
+			"name": "Energy",
+			"group": 5
+		}, {
+			"id": 13,
+			"name": "Emitters",
+			"group": 5
+		}, {
+			"id": 14,
+			"name": "Quality",
+			"group": 5
+		}, {
+			"id": 15,
+			"name": "sources",
+			"group": 6
+		}, {
+			"id": 16,
+			"name": "Reactions",
+			"group": 6
+		}, {
+			"id": 17,
+			"name": "OrderBulk",
+			"group": 6
+		}, {
+			"id": 18,
+			"name": "OrderTank",
+			"group": 6
+		}, {
+			"id": "19",
+			"name": "OrderWall",
+			"group": 6
+		}, {
+			"id": 20,
+			"name": "GlobalBulk",
+			"group": 6
+		}, {
+			"id": 21,
+			"name": "GlobalWall",
+			"group": 6
+		}, {
+			"id": 22,
+			"name": "LimitingPotentia",
+			"group": 6
+		}, {
+			"id": 23,
+			"name": "RoughnessCorrelation",
+			"group": 6
+		}, {
+			"id": 24,
+			"name": "Mixing",
+			"group": 7
+		}, {
+			"id": 25,
+			"name": "Tank",
+			"group": 7
+		}, {
+			"id": 26,
+			"name": "Others",
+			"group": 7
+		}, {
+			"id": 27,
+			"name": "Times",
+			"group": 8
+		}, {
+			"id": 28,
+			"name": "Duration",
+			"group": 8
+		}, {
+			"id": 29,
+			"name": "HydraulicTimeStep",
+			"group": 8
+		}, {
+			"id": 30,
+			"name": "QualityTimestep",
+			"group": 8
+		}, {
+			"id": 31,
+			"name": "PatternTimestep",
+			"group": 8
+		}, {
+			"id": 32,
+			"name": "PatternStart",
+			"group": 8
+		}, {
+			"id": 33,
+			"name": "ReportTimeStep",
+			"group": 8
+		}, {
+			"id": 34,
+			"name": "ReportStart",
+			"group": 8
+		}, {
+			"id": 35,
+			"name": "Statistic",
+			"group": 8
+		}, {
+			"id": 36,
+			"name": "Report",
+			"group": 9
+		}, {
+			"id": 37,
+			"name": "Status",
+			"group": 9
+		}, {
+			"id": 38,
+			"name": "Summary",
+			"group": 9
+		}, {
+			"id": 39,
+			"name": "Page",
+			"group": 9
+		}, {
+			"id": "40",
+			"name": "Options",
+			"group": 10
+		},
+		{
+			"id": 41,
+			"name": "units",
+			"group": 10
+		},
+		{
+			"id": 42,
+			"name": "headloss",
+			"group": 10
+		},
+		{
+			"id": 43,
+			"name": "Sp.Gravity",
+			"group": 10
+		},
+		{
+			"id": 44,
+			"name": "Viscosity",
+			"group": 10
+		},
+		{
+			"id": 45,
+			"name": "Trials",
+			"group": 10
+		},
+		{
+			"id": 46,
+			"name": "Accuracy",
+			"group": 10
+		},
+		{
+			"id": 47,
+			"name": "CheckFreq",
+			"group": 10
+		},
+		{
+			"id": 48,
+			"name": "Maxcheck",
+			"group": 10
+		},
+		{
+			"id": 49,
+			"name": "DampLimit",
+			"group": 10
+		},
+		{
+			"id": 50,
+			"name": "Unbalanced",
+			"group": 10
+		},{
+			"id": 51,
+			"name": "Pattern",
+			"group": 10
+		},{
+			"id": 52,
+			"name": "DemandMultiplier",
+			"group": 10
+		},{
+			"id": 53,
+			"name": "EmitterExponent",
+			"group": 10
+		},{
+			"id": 54,
+			"name": "Quality",
+			"group": 10
+		},{
+			"id": 55,
+			"name": "Diffusivity",
+			"group": 10
+		},{
+			"id": 56,
+			"name": "Tolerance",
+			"group": 10
+		},{
+			"id": 57,
+			"name": "Coordinates",
+			"group": 11
+		},{
+			"id": 58,
+			"name": "XCoord",
+			"group": 11
+		},{
+			"id": 59,
+			"name": "YCoord",
+			"group": 11
+		},{
+			"id": 60,
+			"name": "Vertices",
+			"group": 12
+		},{
+			"id": 61,
+			"name": "Link",
+			"group": 13
+		},{
+			"id": 62,
+			"name": "id",
+			"group": 1
+		},{
+			"id": 63,
+			"name": "elevation",
+			"group": 1
+		},{
+			"id": 64,
+			"name": "Demand",
+			"group": 1
+		},{
+			"id": 65,
+			"name": "Pattern",
+			"group": 1
+		},{
+			"id": 66,
+			"name": "id",
+			"group": 2
+		},{
+			"id": 67,
+			"name": "head",
+			"group": 2
+		},{
+			"id": 68,
+			"name": "pattern",
+			"group": 2
+		},{
+			"id": 69,
+			"name": "Elevation",
+			"group": 2
+		},{
+			"id": 70,
+			"name": "initLevel",
+			"group": 2
+		},{
+			"id": 71,
+			"name": "Maxlevel",
+			"group": 2
+		},{
+			"id": 72,
+			"name": "Diameter",
+			"group": 2
+		},{
+			"id": 73,
+			"name": "MinVol",
+			"group": 2
+		},{
+			"id": 74,
+			"name": "VolCurve",
+			"group": 2
+		},{
+			"id": 75,
+			"name": "Node1",
+			"group": 2
+		},{
+			"id": 76,
+			"name": "Node2",
+			"group": 2
+		},{
+			"id": 77,
+			"name": "Length",
+			"group": 2
+		},{
+			"id": 78,
+			"name": "Roughness",
+			"group": 2
+		},{
+			"id": 79,
+			"name": "MinorLoss",
+			"group": 2
+		},{
+			"id": 80,
+			"name": "Status",
+			"group": 2
+		},{
+			"id": 81,
+			"name": "multipliers",
+			"group": 3
+		},{
+			"id": 82,
+			"name": "XValue",
+			"group": 2
+		},{
+			"id": 83,
+			"name": "YValue",
+			"group": 2
+		},{
+			"id":84,
+			"name":"network",
+			"group":1
+		}
+	],
+	"links": [{
+			"source": 0,
+			"target": 62,
+			"value": 1
+		}, {
+			"source": 0,
+			"target": 63,
+			"value": 8
+		}, {
+			"source": 0,
+			"target": 64,
+			"value": 10
+		}, {
+			"source": 0,
+			"target": 65,
+			"value": 6
+		}, {
+			"source": 1,
+			"target": 66,
+			"value": 1
+		}, {
+			"source": 1,
+			"target": 67,
+			"value": 1
+		}, {
+			"source": 1,
+			"target": 68,
+			"value": 1
+		}, {
+			"source": 2,
+			"target": 66,
+			"value": 1
+		}, {
+			"source": 2,
+			"target": 69,
+			"value": 2
+		}, {
+			"source": 2,
+			"target": 70,
+			"value": 1
+		}, {
+			"source": 2,
+			"target": 71,
+			"value": 1
+		}, {
+			"source": 2,
+			"target": 72,
+			"value": 3
+		}, {
+			"source": 2,
+			"target": 73,
+			"value": 3
+		}, {
+			"source": 2,
+			"target": 74,
+			"value": 5
+		}, {
+			"source": 3,
+			"target": 66,
+			"value": 1
+		}, {
+			"source": 3,
+			"target": 72,
+			"value": 1
+		}, {
+			"source": 3,
+			"target": 73,
+			"value": 1
+		}, {
+			"source": 3,
+			"target": 75,
+			"value": 1
+		}, {
+			"source": 3,
+			"target": 76,
+			"value": 4
+		}, {
+			"source": 3,
+			"target": 77,
+			"value": 4
+		}, {
+			"source": 3,
+			"target": 78,
+			"value": 4
+		}, {
+			"source": 3,
+			"target": 79,
+			"value": 4
+		}, {
+			"source": 3,
+			"target": 80,
+			"value": 4
+		}, {
+			"source": 4,
+			"target": 66,
+			"value": 4
+		}, {
+			"source": 4,
+			"target": 75,
+			"value": 3
+		}, {
+			"source": 4,
+			"target": 76,
+			"value": 3
+		}, {
+			"source": 5,
+			"target": 66,
+			"value": 3
+		}, {
+			"source": 5,
+			"target": 75,
+			"value": 4
+		}, {
+			"source": 5,
+			"target": 76,
+			"value": 3
+		}, {
+			"source": 5,
+			"target": 72,
+			"value": 3
+		}, {
+			"source": 5,
+			"target": 79,
+			"value": 3
+		}, {
+			"source": 6,
+			"target": 65,
+			"value": 3
+		}, {
+			"source": 8,
+			"target": 81,
+			"value": 5
+		}, {
+			"source": 9,
+			"target": 82,
+			"value": 3
+		}, {
+			"source": 9,
+			"target": 83,
+			"value": 3
+		}, {
+			"source": 16,
+			"target": 17,
+			"value": 3
+		}, {
+			"source": 16,
+			"target": 18,
+			"value": 3
+		}, {
+			"source": 16,
+			"target": 19,
+			"value": 3
+		}, {
+			"source": 16,
+			"target": 20,
+			"value": 3
+		}, {
+			"source": 16,
+			"target": 21,
+			"value": 5
+		}, {
+			"source": 16,
+			"target": 22,
+			"value": 4
+		},
+		{
+			"source": 16,
+			"target": 23,
+			"value": 4
+		}, {
+			"source": 24,
+			"target": 25,
+			"value": 4
+		},
+		{
+			"source": 27,
+			"target": 28,
+			"value": 4
+		},
+		{
+			"source": 27,
+			"target": 29,
+			"value": 4
+		},
+		{
+			"source": 27,
+			"target": 30,
+			"value": 4
+		},
+		{
+			"source": 27,
+			"target": 31,
+			"value": 4
+		},
+		{
+			"source": 27,
+			"target": 32,
+			"value": 4
+		},
+		{
+			"source": 27,
+			"target": 33,
+			"value": 4
+		},
+		 {
+			"source": 27,
+			"target": 34,
+			"value": 1
+		},
+		{
+			"source": 27,
+			"target": 35,
+			"value": 1
+		},{
+			"source": 36,
+			"target": 37,
+			"value": 1
+		},{
+			"source":36,
+			"target": 38,
+			"value": 1
+		},{
+			"source":36,
+			"target": 39,
+			"value": 1
+		},{
+			"source":36,
+			"target": 40,
+			"value": 1
+		},{
+			"source":36,
+			"target": 38,
+			"value": 1
+		},{
+			"source":40,
+			"target": 41,
+			"value": 1
+		},{
+			"source":40,
+			"target": 42,
+			"value": 1
+		},{
+			"source":40,
+			"target": 43,
+			"value": 1
+		},{
+			"source":40,
+			"target": 44,
+			"value": 1
+		},{
+			"source":40,
+			"target": 45,
+			"value": 1
+		},{
+			"source":40,
+			"target": 46,
+			"value": 1
+		},{
+			"source":40,
+			"target": 47,
+			"value": 1
+		},{
+			"source":40,
+			"target": 48,
+			"value": 1
+		},{
+			"source":40,
+			"target": 49,
+			"value": 1
+		},{
+			"source":40,
+			"target": 50,
+			"value": 1
+		},{
+			"source":40,
+			"target": 51,
+			"value": 1
+		},{
+			"source":40,
+			"target": 52,
+			"value": 1
+		},{
+			"source":40,
+			"target": 53,
+			"value": 1
+		},{
+			"source":40,
+			"target": 54,
+			"value": 1
+		},{
+			"source":40,
+			"target": 55,
+			"value": 1
+		},{
+			"source":40,
+			"target": 56,
+			"value": 1
+		},{
+			"source":57,
+			"target": 58,
+			"value": 1
+		},{
+			"source":57,
+			"target": 59,
+			"value": 1
+		},{
+			"source":60,
+			"target": 58,
+			"value": 1
+		},{
+			"source":60,
+			"target": 59,
+			"value": 1
+		},{
+			"source":84,
+			"target": 0,
+			"value": 1
+		},{
+			"source":84,
+			"target": 1,
+			"value": 1
+		},{
+			"source":84,
+			"target": 2,
+			"value": 1
+		},{
+			"source":84,
+			"target": 3,
+			"value": 1
+		},{
+			"source":84,
+			"target": 4,
+			"value": 1
+		},{
+			"source":84,
+			"target": 5,
+			"value": 1
+		},{
+			"source":84,
+			"target": 6,
+			"value": 1
+		},{
+			"source":84,
+			"target": 7,
+			"value": 1
+		},{
+			"source":84,
+			"target": 8,
+			"value": 1
+		},{
+			"source":84,
+			"target": 9,
+			"value": 1
+		},{
+			"source":84,
+			"target": 10,
+			"value": 1
+		},{
+			"source":84,
+			"target": 11,
+			"value": 1
+		},{
+			"source":84,
+			"target": 12,
+			"value": 1
+		},{
+			"source":84,
+			"target": 13,
+			"value": 1
+		},{
+			"source":84,
+			"target": 14,
+			"value": 1
+		},{
+			"source":84,
+			"target": 15,
+			"value": 1
+		},{
+			"source":84,
+			"target": 16,
+			"value": 1
+		},{
+			"source":84,
+			"target": 24,
+			"value": 1
+		},{
+			"source":84,
+			"target": 27,
+			"value": 1
+		},{
+			"source":84,
+			"target": 36,
+			"value": 1
+		},{
+			"source":84,
+			"target": 40,
+			"value": 1
+		},{
+			"source":84,
+			"target": 57,
+			"value": 1
+		},{
+			"source":84,
+			"target": 60,
+			"value": 1
+		}
+	]
+}

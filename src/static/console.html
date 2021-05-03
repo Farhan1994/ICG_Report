@@ -1,0 +1,1468 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Insights Dashboard</title>
+
+    <!-- Bootstrap core CSS 
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/bootstrap.min.css') }}" type="text/css" media="screen" />
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/console.css') }}" type="text/css" media="screen" />
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/charts.css') }}" type="text/css" media="screen" />
+	-->
+	  <link rel="stylesheet" href='/static/styles/bootstrap.min.css' type="text/css" media="screen" />
+    <link rel="stylesheet" href='/static/styles/console.css' type="text/css" media="screen" />
+    <link rel="stylesheet" href='/static/styles/charts.css' type="text/css" media="screen" />
+	
+	<script type="text/javascript" src="/static/lib/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/lib/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/static/lib/d3/d3.min.js"></script>
+    <script type="text/javascript" src="/static/lib/d3/topojson.v1.min.js"></script>
+    <script type="text/javascript" src="/static/lib/charts/charts.min.js"></script>    
+    <script type="text/javascript" src="/static/lib/datamaps/datamaps.min.js"></script>
+    <!--  modification starts here -->
+   
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+ <script src="http://code.highcharts.com/highcharts.js"></script>
+ <script src="https://code.highcharts.com/modules/series-label.js"></script>
+<script src="http://code.highcharts.com/modules/exporting.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+ <script type="text/javascript" src="/static/lib/d3/d3.v3.min.js"></script>
+<script src="/static/lib/d3/d3.layout.orbit.js" charset="utf-8" type="text/javascript"></script>
+    <!--  modification ends here -->
+  </head>
+  
+  <style>
+
+.link {
+  stroke: #ccc;
+}
+
+.redlink {
+  stroke: #FF0000;
+}
+
+.node text {
+  pointer-events: none;
+  font: 10px sans-serif;
+}
+
+
+  </style>
+  <body>
+    <div class="navbar-wrapper">
+      <div class="container">
+
+        <div class="navbar navbar-default navbar-static-top" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">NSS Dashboard</a>
+            </div>
+            <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Project Management Dashboard</a></li>
+                <li><a href="#about">Developer Dashboard</a></li>    
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing">
+
+      <div class="row">
+        <div class="col-lg-4">
+          <div id="piechart" style="margin:20px;">
+          <div id="container" style="min-width: 380px; height:380px; margin: 0 auto"></div>
+    			<script type="text/javascript">
+    			$(function () {
+    			    
+    			    /**
+    			     * Dark theme for Highcharts JS
+    			     * @author Torstein Honsi
+    			     */
+    			    
+    			    // Load the fonts
+    			    Highcharts.createElement('link', {
+    			       href: 'http://fonts.googleapis.com/css?family=Unica+One',
+    			       rel: 'stylesheet',
+    			       type: 'text/css'
+    			    }, null, document.getElementsByTagName('head')[0]);
+    			    
+    			    Highcharts.theme = {
+    			       colors: ["#2b908f", "#90ee7e", "#f45b5b", "#7798BF", "#aaeeee", "#ff0066", "#eeaaee",
+    			          "#55BF3B", "#DF5353", "#7798BF", "#aaeeee"],
+    			       chart: {
+    			          backgroundColor: {
+    			             linearGradient: { x1: 0, y1: 0, x2: 1, y2: 1 },
+    			             stops: [
+    			                [0, '#2a2a2b'],
+    			                [1, '#3e3e40']
+    			             ]
+    			          },
+    			          style: {
+    			             fontFamily: "'Unica One', sans-serif"
+    			          },
+    			          plotBorderColor: '#606063'
+    			       },
+    			       title: {
+    			          style: {
+    			             color: '#E0E0E3',
+    			             textTransform: 'uppercase',
+    			             fontSize: '20px'
+    			          }
+    			       },
+    			       subtitle: {
+    			          style: {
+    			             color: '#E0E0E3',
+    			             textTransform: 'uppercase'
+    			          }
+    			       },
+    			       xAxis: {
+    			          gridLineColor: '#707073',
+    			          labels: {
+    			             style: {
+    			                color: '#E0E0E3'
+    			             }
+    			          },
+    			          lineColor: '#707073',
+    			          minorGridLineColor: '#505053',
+    			          tickColor: '#707073',
+    			          title: {
+    			             style: {
+    			                color: '#A0A0A3'
+    			    
+    			             }
+    			          }
+    			       },
+    			       yAxis: {
+    			          gridLineColor: '#707073',
+    			          labels: {
+    			             style: {
+    			                color: '#E0E0E3'
+    			             }
+    			          },
+    			          lineColor: '#707073',
+    			          minorGridLineColor: '#505053',
+    			          tickColor: '#707073',
+    			          tickWidth: 1,
+    			          title: {
+    			             style: {
+    			                color: '#A0A0A3'
+    			             }
+    			          }
+    			       },
+    			       tooltip: {
+    			          backgroundColor: 'rgba(0, 0, 0, 0.85)',
+    			          style: {
+    			             color: '#F0F0F0'
+    			          }
+    			       },
+    			       plotOptions: {
+    			          series: {
+    			             dataLabels: {
+    			                color: '#B0B0B3'
+    			             },
+    			             marker: {
+    			                lineColor: '#333'
+    			             }
+    			          },
+    			          boxplot: {
+    			             fillColor: '#505053'
+    			          },
+    			          candlestick: {
+    			             lineColor: 'white'
+    			          },
+    			          errorbar: {
+    			             color: 'white'
+    			          }
+    			       },
+    			       legend: {
+    			    	 
+    			          itemStyle: {
+    			             color: '#E0E0E3'
+    			          },
+    			          itemHoverStyle: {
+    			             color: '#FFF'
+    			          },
+    			          itemHiddenStyle: {
+    			             color: '#606063'
+    			          }
+    			       },
+    			       credits: {
+    			          style: {
+    			             color: '#666'
+    			          }
+    			       },
+    			       labels: {
+    			          style: {
+    			             color: '#707073'
+    			          }
+    			       },
+    			    
+    			       drilldown: {
+    			          activeAxisLabelStyle: {
+    			             color: '#F0F0F3'
+    			          },
+    			          activeDataLabelStyle: {
+    			             color: '#F0F0F3'
+    			          }
+    			       },
+    			    
+    			       navigation: {
+    			          buttonOptions: {
+    			             symbolStroke: '#DDDDDD',
+    			             theme: {
+    			                fill: '#505053'
+    			             }
+    			          }
+    			       },
+    			    
+    			       // scroll charts
+    			       rangeSelector: {
+    			          buttonTheme: {
+    			             fill: '#505053',
+    			             stroke: '#000000',
+    			             style: {
+    			                color: '#CCC'
+    			             },
+    			             states: {
+    			                hover: {
+    			                   fill: '#707073',
+    			                   stroke: '#000000',
+    			                   style: {
+    			                      color: 'white'
+    			                   }
+    			                },
+    			                select: {
+    			                   fill: '#000003',
+    			                   stroke: '#000000',
+    			                   style: {
+    			                      color: 'white'
+    			                   }
+    			                }
+    			             }
+    			          },
+    			          inputBoxBorderColor: '#505053',
+    			          inputStyle: {
+    			             backgroundColor: '#333',
+    			             color: 'silver'
+    			          },
+    			          labelStyle: {
+    			             color: 'silver'
+    			          }
+    			       },
+    			    
+    			       navigator: {
+    			          handles: {
+    			             backgroundColor: '#666',
+    			             borderColor: '#AAA'
+    			          },
+    			          outlineColor: '#CCC',
+    			          maskFill: 'rgba(255,255,255,0.1)',
+    			          series: {
+    			             color: '#7798BF',
+    			             lineColor: '#A6C7ED'
+    			          },
+    			          xAxis: {
+    			             gridLineColor: '#505053'
+    			          }
+    			       },
+    			    
+    			       scrollbar: {
+    			          barBackgroundColor: '#808083',
+    			          barBorderColor: '#808083',
+    			          buttonArrowColor: '#CCC',
+    			          buttonBackgroundColor: '#606063',
+    			          buttonBorderColor: '#606063',
+    			          rifleColor: '#FFF',
+    			          trackBackgroundColor: '#404043',
+    			          trackBorderColor: '#404043'
+    			       },
+    			    
+    			       // special colors for some of the
+    			       legendBackgroundColor: 'rgba(0, 0, 0, 0.5)',
+    			       background2: '#505053',
+    			       dataLabelsColor: '#B0B0B3',
+    			       textColor: '#C0C0C0',
+    			       contrastTextColor: '#F0F0F3',
+    			       maskColor: 'rgba(255,255,255,0.3)'
+    			    };
+    			    
+    			    // Apply the theme
+    			    Highcharts.setOptions(Highcharts.theme);
+    			        
+    			        
+    			    // ======================================================================================
+    			    // ============================ AQUI COMEÇA A BRINCADEIRA ===============================
+    			    // ======================================================================================
+    			    
+    			    
+    			    $('#container').highcharts({
+    			        chart: {
+    			            type: 'column'
+    			        },
+    			        title: {
+    			            text: 'Deliverables Status'
+    			        },
+    			        xAxis: {
+    			            categories: ['11-Dec-2017', '18-Dec-2017', '25-Dec-2017', '1-Jan-18', '8-Jan2018', '15-Jan-2018', '22-Jan-2018', '29-Jan-2018', '5-Feb-2018', '12-Feb-2018']
+    			        },
+    			        yAxis: {
+    			            min: 0,
+    			            title: {
+    			                text: '# Tasks'
+    			            },
+    			            stackLabels: {
+    			                enabled: true,
+    			                style: {
+    			                    fontWeight: 'bold',
+    			                    color: (Highcharts.theme && Highcharts.theme.textColor) || 'gray'
+    			                }
+    			            }
+    			        },
+    			        legend: {
+    			            align: 'right',
+    			            x: -40,
+    			            verticalAlign: 'top',
+    			            y: 20,
+    			            floating: true,
+    			            backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || 'white',
+    			            borderColor: '#CCC',
+    			            borderWidth: 1,
+    			            shadow: false
+    			        },
+    			        tooltip: {
+    			            formatter: function () {
+    			                return '<b>' + this.x + '</b><br/>' +
+    			                    this.series.name + ': ' + this.y + '<br/>' +
+    			                    'Total: ' + this.point.stackTotal;
+    			            }
+    			        },
+    			        plotOptions: {
+    			            column: {
+    			                stacking: 'normal',
+    			                dataLabels: {
+    			                    enabled: false,
+    			                    color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
+    			                    style: {
+    			                        textShadow: '0 0 3px black, 0 0 3px black'
+    			                    }
+    			                }
+    			            }
+    			        },
+    			        series: [{
+    			            name: 'AV Aviation',
+    			            data: [54, 33, 42, 28, 23, 22, 21, 22, 31, 26]
+    			        }, {
+    			            name: 'Motors & Motors',
+    			            data: [21, 22, 31, 20, 12, 10, 13, 16, 19, 21]
+    			        }, {
+    			            name: 'State of US',
+    			            data: [35, 43, 48, 12, 15, 21, 21, 34, 43, 45]
+    			        }, {
+    			            name: 'General Bank',
+    			            data: [21, 22, 31, 29, 12, 10, 31, 24, 12, 10]
+    			        }, {
+    			            name: 'Green Oil',
+    			            data: [5, 4, 8, 12, 1, 2, 3, 12, 18, 18]
+    			        }]
+    			    }); 
+    			});
+
+
+    			</script>
+		  </div>
+          <h2>Deliverables Achieved</h2>
+          <p>Chart for the top 5 projects </p>
+          <!--  <p><a class="btn btn-default" href="#" role="button">Customize &raquo;</a></p> -->
+        </div><!-- /.col-lg-4 -->
+       
+        <div class="col-lg-4">
+          <div id="bubblechart" style="margin:20px; margin-left:20px;">
+    		 <div id="effortchart" style="min-width: 380px; height: 380px; margin: 10 auto"></div>
+    			<script type="text/javascript">
+    			$(function () {
+    			    
+    			    /**
+    			     * Dark theme for Highcharts JS
+    			     * @author Torstein Honsi
+    			     */
+    			    
+    			    // Load the fonts
+    			    Highcharts.createElement('link', {
+    			       href: 'http://fonts.googleapis.com/css?family=Unica+One',
+    			       rel: 'stylesheet',
+    			       type: 'text/css'
+    			    }, null, document.getElementsByTagName('head')[0]);
+    			    
+    			    Highcharts.theme = {
+    			       colors: ["#2b908f", "#90ee7e", "#f45b5b", "#7798BF", "#aaeeee", "#ff0066", "#eeaaee",
+    			          "#55BF3B", "#DF5353", "#7798BF", "#aaeeee"],
+    			       chart: {
+    			          backgroundColor: {
+    			             linearGradient: { x1: 0, y1: 0, x2: 1, y2: 1 },
+    			             stops: [
+    			                [0, '#2a2a2b'],
+    			                [1, '#3e3e40']
+    			             ]
+    			          },
+    			          style: {
+    			             fontFamily: "'Unica One', sans-serif"
+    			          },
+    			          plotBorderColor: '#606063'
+    			       },
+    			       title: {
+    			          style: {
+    			             color: '#E0E0E3',
+    			             textTransform: 'uppercase',
+    			             fontSize: '20px'
+    			          }
+    			       },
+    			       subtitle: {
+    			          style: {
+    			             color: '#E0E0E3',
+    			             textTransform: 'uppercase'
+    			          }
+    			       },
+    			       xAxis: {
+    			          gridLineColor: '#707073',
+    			          labels: {
+    			             style: {
+    			                color: '#E0E0E3'
+    			             }
+    			          },
+    			          lineColor: '#707073',
+    			          minorGridLineColor: '#505053',
+    			          tickColor: '#707073',
+    			          title: {
+    			             style: {
+    			                color: '#A0A0A3'
+    			    
+    			             }
+    			          }
+    			       },
+    			       yAxis: {
+    			          gridLineColor: '#707073',
+    			          labels: {
+    			             style: {
+    			                color: '#E0E0E3'
+    			             }
+    			          },
+    			          lineColor: '#707073',
+    			          minorGridLineColor: '#505053',
+    			          tickColor: '#707073',
+    			          tickWidth: 1,
+    			          title: {
+    			             style: {
+    			                color: '#A0A0A3'
+    			             }
+    			          }
+    			       },
+    			       tooltip: {
+    			          backgroundColor: 'rgba(0, 0, 0, 0.85)',
+    			          style: {
+    			             color: '#F0F0F0'
+    			          }
+    			       },
+    			       plotOptions: {
+    			          series: {
+    			             dataLabels: {
+    			                color: '#B0B0B3'
+    			             },
+    			             marker: {
+    			                lineColor: '#333'
+    			             }
+    			          },
+    			          boxplot: {
+    			             fillColor: '#505053'
+    			          },
+    			          candlestick: {
+    			             lineColor: 'white'
+    			          },
+    			          errorbar: {
+    			             color: 'white'
+    			          }
+    			       },
+    			       legend: {
+    			    	 
+    			          itemStyle: {
+    			             color: '#E0E0E3'
+    			          },
+    			          itemHoverStyle: {
+    			             color: '#FFF'
+    			          },
+    			          itemHiddenStyle: {
+    			             color: '#606063'
+    			          }
+    			       },
+    			       credits: {
+    			          style: {
+    			             color: '#666'
+    			          }
+    			       },
+    			       labels: {
+    			          style: {
+    			             color: '#707073'
+    			          }
+    			       },
+    			    
+    			       drilldown: {
+    			          activeAxisLabelStyle: {
+    			             color: '#F0F0F3'
+    			          },
+    			          activeDataLabelStyle: {
+    			             color: '#F0F0F3'
+    			          }
+    			       },
+    			    
+    			       navigation: {
+    			          buttonOptions: {
+    			             symbolStroke: '#DDDDDD',
+    			             theme: {
+    			                fill: '#505053'
+    			             }
+    			          }
+    			       },
+    			    
+    			       // scroll charts
+    			       rangeSelector: {
+    			          buttonTheme: {
+    			             fill: '#505053',
+    			             stroke: '#000000',
+    			             style: {
+    			                color: '#CCC'
+    			             },
+    			             states: {
+    			                hover: {
+    			                   fill: '#707073',
+    			                   stroke: '#000000',
+    			                   style: {
+    			                      color: 'white'
+    			                   }
+    			                },
+    			                select: {
+    			                   fill: '#000003',
+    			                   stroke: '#000000',
+    			                   style: {
+    			                      color: 'white'
+    			                   }
+    			                }
+    			             }
+    			          },
+    			          inputBoxBorderColor: '#505053',
+    			          inputStyle: {
+    			             backgroundColor: '#333',
+    			             color: 'silver'
+    			          },
+    			          labelStyle: {
+    			             color: 'silver'
+    			          }
+    			       },
+    			    
+    			       navigator: {
+    			          handles: {
+    			             backgroundColor: '#666',
+    			             borderColor: '#AAA'
+    			          },
+    			          outlineColor: '#CCC',
+    			          maskFill: 'rgba(255,255,255,0.1)',
+    			          series: {
+    			             color: '#7798BF',
+    			             lineColor: '#A6C7ED'
+    			          },
+    			          xAxis: {
+    			             gridLineColor: '#505053'
+    			          }
+    			       },
+    			    
+    			       scrollbar: {
+    			          barBackgroundColor: '#808083',
+    			          barBorderColor: '#808083',
+    			          buttonArrowColor: '#CCC',
+    			          buttonBackgroundColor: '#606063',
+    			          buttonBorderColor: '#606063',
+    			          rifleColor: '#FFF',
+    			          trackBackgroundColor: '#404043',
+    			          trackBorderColor: '#404043'
+    			       },
+    			    
+    			       // special colors for some of the
+    			       legendBackgroundColor: 'rgba(0, 0, 0, 0.5)',
+    			       background2: '#505053',
+    			       dataLabelsColor: '#B0B0B3',
+    			       textColor: '#C0C0C0',
+    			       contrastTextColor: '#F0F0F3',
+    			       maskColor: 'rgba(255,255,255,0.3)'
+    			    };
+    			    
+    			    // Apply the theme
+    			    Highcharts.setOptions(Highcharts.theme);
+    			        
+    			        
+    			    // ======================================================================================
+    			    // ============================ AQUI COMEÇA A BRINCADEIRA ===============================
+    			    // ======================================================================================
+    			    
+    			    
+    			    $('#effortchart').highcharts({
+    			        chart: {
+    			            type: 'column'
+    			        },
+    			        title: {
+    			            text: ' Effort (K hours) '
+    			        },
+    			        xAxis: {
+    			            categories: ['11-Dec-2017', '18-Dec-2017', '25-Dec-2017', '1-Jan-18', '8-Jan2018', '15-Jan-2018', '22-Jan-2018', '29-Jan-2018', '5-Feb-2018', '12-Feb-2018']
+    			        },
+    			        yAxis: {
+    			            min: 0,
+    			            title: {
+    			                text: '# '
+    			            },
+    			            stackLabels: {
+    			                enabled: true,
+    			                style: {
+    			                    fontWeight: 'bold',
+    			                    color: (Highcharts.theme && Highcharts.theme.textColor) || 'gray'
+    			                }
+    			            }
+    			        },
+    			        legend: {
+    			            align: 'right',
+    			            x: -10,
+    			            verticalAlign: 'top',
+    			            y: 20,
+    			            floating: true,
+    			            backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || 'white',
+    			            borderColor: '#CCC',
+    			            borderWidth: 1,
+    			            shadow: false
+    			        },
+    			        tooltip: {
+    			            formatter: function () {
+    			                return '<b>' + this.x + '</b><br/>' +
+    			                    this.series.name + ': ' + this.y + '<br/>' +
+    			                    'Total: ' + this.point.stackTotal;
+    			            }
+    			        },
+    			        plotOptions: {
+    			            column: {
+    			              
+    			                dataLabels: {
+    			                    enabled: false,
+    			                    color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
+    			                    style: {
+    			                        textShadow: '0 0 3px black, 0 0 3px black'
+    			                    }
+    			                }
+    			            }
+    			        },
+    			        series: [
+    			            {name:'Aviation Effort',
+    			        	data:[18,17,13,13,14,15,15,15,16,15]
+    			            },
+    			            {name:'Motor Effort',
+    			        	data:[9,8,11,8,8,7,8,8,9,11]
+    			            },
+    			            
+    			            {name:'StateofUS Effort',
+        			        	data:[36,40,42,16,17,20,20,24,30,39]
+        			       },
+        			       
+   			            {name:'GeneralBank Effort',
+       			        	data:[20,20,40,27,10,9,38,22,10,10]
+       			       },
+       			    
+			            {name:'GreenOil Effort',
+   			        	data:[10,10,12,12,0.5,0.5,0.5,9,10,10]
+   			       }
+    			       
+    			        
+    			        ]
+    			    }); 
+    			});
+
+
+    			</script>
+		  </div>
+		 
+          <h2> Development Effort  </h2>
+          <p> effort (Dev+QA+Mgmt) in K hours</p>
+         
+        </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+          <div id="piechart" style="margin:10px;">
+          <div id="attrition" style="min-width: 380px; height:380px; margin: 0 auto; margin-left:8px"></div>
+    			<script type="text/javascript">
+    			$(function () {
+    			    
+    			    /**
+    			     * Dark theme for Highcharts JS
+    			     * @author Torstein Honsi
+    			     */
+    			    
+    			    // Load the fonts
+    			    Highcharts.createElement('link', {
+    			       href: 'http://fonts.googleapis.com/css?family=Unica+One',
+    			       rel: 'stylesheet',
+    			       type: 'text/css'
+    			    }, null, document.getElementsByTagName('head')[0]);
+    			    
+    			    Highcharts.theme = {
+    			       colors: ["#2b908f", "#90ee7e", "#f45b5b", "#7798BF", "#aaeeee", "#ff0066", "#eeaaee",
+    			          "#55BF3B", "#DF5353", "#7798BF", "#aaeeee"],
+    			       chart: {
+    			          backgroundColor: {
+    			             linearGradient: { x1: 0, y1: 0, x2: 1, y2: 1 },
+    			             stops: [
+    			                [0, '#2a2a2b'],
+    			                [1, '#3e3e40']
+    			             ]
+    			          },
+    			          style: {
+    			             fontFamily: "'Unica One', sans-serif"
+    			          },
+    			          plotBorderColor: '#606063'
+    			       },
+    			       title: {
+    			          style: {
+    			             color: '#E0E0E3',
+    			             textTransform: 'uppercase',
+    			             fontSize: '20px'
+    			          }
+    			       },
+    			       subtitle: {
+    			          style: {
+    			             color: '#E0E0E3',
+    			             textTransform: 'uppercase'
+    			          }
+    			       },
+    			       xAxis: {
+    			          gridLineColor: '#707073',
+    			          labels: {
+    			             style: {
+    			                color: '#E0E0E3'
+    			             }
+    			          },
+    			          lineColor: '#707073',
+    			          minorGridLineColor: '#505053',
+    			          tickColor: '#707073',
+    			          title: {
+    			             style: {
+    			                color: '#A0A0A3'
+    			    
+    			             }
+    			          }
+    			       },
+    			       yAxis: {
+    			          gridLineColor: '#707073',
+    			          labels: {
+    			             style: {
+    			                color: '#E0E0E3'
+    			             }
+    			          },
+    			          lineColor: '#707073',
+    			          minorGridLineColor: '#505053',
+    			          tickColor: '#707073',
+    			          tickWidth: 1,
+    			          title: {
+    			             style: {
+    			                color: '#A0A0A3'
+    			             }
+    			          }
+    			       },
+    			       tooltip: {
+    			          backgroundColor: 'rgba(0, 0, 0, 0.85)',
+    			          style: {
+    			             color: '#F0F0F0'
+    			          }
+    			       },
+    			       plotOptions: {
+    			          series: {
+    			             dataLabels: {
+    			                color: '#B0B0B3'
+    			             },
+    			             marker: {
+    			                lineColor: '#333'
+    			             }
+    			          },
+    			          boxplot: {
+    			             fillColor: '#505053'
+    			          },
+    			          candlestick: {
+    			             lineColor: 'white'
+    			          },
+    			          errorbar: {
+    			             color: 'white'
+    			          }
+    			       },
+    			       legend: {
+    			    	 
+    			          itemStyle: {
+    			             color: '#E0E0E3'
+    			          },
+    			          itemHoverStyle: {
+    			             color: '#FFF'
+    			          },
+    			          itemHiddenStyle: {
+    			             color: '#606063'
+    			          }
+    			       },
+    			       credits: {
+    			          style: {
+    			             color: '#666'
+    			          }
+    			       },
+    			       labels: {
+    			          style: {
+    			             color: '#707073'
+    			          }
+    			       },
+    			    
+    			       drilldown: {
+    			          activeAxisLabelStyle: {
+    			             color: '#F0F0F3'
+    			          },
+    			          activeDataLabelStyle: {
+    			             color: '#F0F0F3'
+    			          }
+    			       },
+    			    
+    			       navigation: {
+    			          buttonOptions: {
+    			             symbolStroke: '#DDDDDD',
+    			             theme: {
+    			                fill: '#505053'
+    			             }
+    			          }
+    			       },
+    			    
+    			       // scroll charts
+    			       rangeSelector: {
+    			          buttonTheme: {
+    			             fill: '#505053',
+    			             stroke: '#000000',
+    			             style: {
+    			                color: '#CCC'
+    			             },
+    			             states: {
+    			                hover: {
+    			                   fill: '#707073',
+    			                   stroke: '#000000',
+    			                   style: {
+    			                      color: 'white'
+    			                   }
+    			                },
+    			                select: {
+    			                   fill: '#000003',
+    			                   stroke: '#000000',
+    			                   style: {
+    			                      color: 'white'
+    			                   }
+    			                }
+    			             }
+    			          },
+    			          inputBoxBorderColor: '#505053',
+    			          inputStyle: {
+    			             backgroundColor: '#333',
+    			             color: 'silver'
+    			          },
+    			          labelStyle: {
+    			             color: 'silver'
+    			          }
+    			       },
+    			    
+    			       navigator: {
+    			          handles: {
+    			             backgroundColor: '#666',
+    			             borderColor: '#AAA'
+    			          },
+    			          outlineColor: '#CCC',
+    			          maskFill: 'rgba(255,255,255,0.1)',
+    			          series: {
+    			             color: '#7798BF',
+    			             lineColor: '#A6C7ED'
+    			          },
+    			          xAxis: {
+    			             gridLineColor: '#505053'
+    			          }
+    			       },
+    			    
+    			       scrollbar: {
+    			          barBackgroundColor: '#808083',
+    			          barBorderColor: '#808083',
+    			          buttonArrowColor: '#CCC',
+    			          buttonBackgroundColor: '#606063',
+    			          buttonBorderColor: '#606063',
+    			          rifleColor: '#FFF',
+    			          trackBackgroundColor: '#404043',
+    			          trackBorderColor: '#404043'
+    			       },
+    			    
+    			       // special colors for some of the
+    			       legendBackgroundColor: 'rgba(0, 0, 0, 0.5)',
+    			       background2: '#505053',
+    			       dataLabelsColor: '#B0B0B3',
+    			       textColor: '#C0C0C0',
+    			       contrastTextColor: '#F0F0F3',
+    			       maskColor: 'rgba(255,255,255,0.3)'
+    			    };
+    			    
+    			    // Apply the theme
+    			    Highcharts.setOptions(Highcharts.theme);
+    			        
+    			        
+    			    // ======================================================================================
+    			    // ============================ AQUI COMEÇA A BRINCADEIRA ===============================
+    			    // ======================================================================================
+    			    
+    			    
+    			    $('#attrition').highcharts({
+    			      
+    			        title: {
+    			            text: 'Deliverables Status'
+    			        },
+    			        xAxis: {
+    			            categories: ['Sep-2017', 'Oct-2017', 'Nov-2017', 'Dec-2017', 'Jan-2018', 'Feb-2018']
+    			        },
+    			        yAxis: {
+    			            min: 0,
+    			            title: {
+    			                text: '# Employees'
+    			            }
+    			        },
+    			        legend: {
+    			            align: 'right',
+    			            x: -20,
+    			            verticalAlign: 'top',
+    			            y: 20,
+    			            floating: true,
+    			            backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || 'white',
+    			            borderColor: '#CCC',
+    			            borderWidth: 1,
+    			            shadow: false
+    			        },
+    			        tooltip: {
+    			            formatter: function () {
+    			                return '<b>' + this.x + '</b><br/>' +
+    			                    this.series.name + ': ' + this.y + '<br/>' +
+    			                    'Total: ' + this.point.stackTotal;
+    			            }
+    			        },
+    			        plotOptions: {
+    			            series: {
+    			                label: {
+    			                    connectorAllowed: false
+    			                    
+    			                }
+    			            }
+    			        },
+    			        series: [{
+    			            name: 'AV Aviation',
+    			            data: [40 ,40, 40, 40, 35, 36]
+
+    			        }, {
+    			            name: 'Motors & Motors',
+    			            data: [21,21,21 ,20, 19, 18]
+    			        }, {
+    			            name: 'State of US',
+    			            data: [30,30,30,30,30,29]
+    			        }, {
+    			            name: 'General Bank',
+    			            data: [18,17,18,15,15,18]
+    			        }, {
+    			            name: 'Green Oil',
+    			            data: [5,5,5,5,5,5]
+    			        }]
+    			    }); 
+    			});
+
+
+    			</script>
+		  </div>
+          <h2>Attrition </h2>
+          <p>Chart for the top 5 projects </p>
+          <!--  <p><a class="btn btn-default" href="#" role="button">Customize &raquo;</a></p> -->
+        </div><!-- /.col-lg-4 -->
+        
+        
+      </div><!-- /.row -->
+      
+      <hr class="featurette-divider">
+        
+      <hr class="featurette-divider">
+      
+      <div class="row">
+        <div class="col-lg-5" >
+        <div class="panel panel-info">
+          <div class="panel-heading">
+                  Orbit Chart
+           </div>
+          <div class="panel-body">
+          <div id="orbitchart">
+          <svg id="svgOrbit" width="450" height="450"></svg>
+		  	 <script type="text/javascript">
+		 
+		  	function makeViz() {
+		  		
+
+		  	  d3.json("/static/flare.json", function(data) {drawOrbit(data)});
+
+
+		  	}
+
+		  	function drawOrbit(_data) {
+
+		  	  //down with category20a()!!
+		  	  colors = d3.scale.category20b();
+
+		  	  orbitScale = d3.scale.linear().domain([1, 3]).range([3.8, 1.5]).clamp(true);
+		  	  radiusScale = d3.scale.linear().domain([0,1,2,3]).range([20,10,3,1]).clamp(true);
+
+
+		  	  orbit = d3.layout.orbit().size([450,450])
+		  	  .children(function(d) {return d.children})
+		  	  .revolution(function(d) {return d.depth})
+		  	  .orbitSize(function(d) {return orbitScale(d.depth)})
+		  	  .speed(.1)
+		  	  .nodes(_data);
+
+		  	  d3.select("#svgOrbit").selectAll("g.node").data(orbit.nodes())
+		  	  .enter()
+		  	  .append("g")
+		  	  .attr("class", "node")
+		  	  .attr("transform", function(d) {return "translate(" +d.x +"," + d.y+")"})
+		  	  .on("mouseover", nodeOver)
+		  	  .on("mouseout", nodeOut)
+		  	  .on('click', function(d){
+		  		/* var sel = d3.select("#forcefieldchart svg")
+		  					.selectAll("g")
+		  					.attr("id",19) */
+		  		//var sel = d3.select("#llleave");
+		  		//sel.dblclick()
+		  		$("#llleave").d3Click();
+		  		//var evt = new Event('dblclick')
+		  		//sel.dispatchEvent(evt)
+		  	//	 var sel= d3.select("#forcefieldchart svg")
+		  	//	 		  .selectAll("g")
+		  	//			.attr("text", "Eponine")
+		  	//	console.log(sel)
+		  	 // if(node.text()=="Valjean" || node.text()=="Javert" || node.text()=="Myriel"){
+				//	alert(node.text());
+					//sel.link.attr("class","redlink")
+				//}
+    			
+		          });
+		  	  
+		  	jQuery.fn.d3Click = function () {
+		  	  this.each(function (i, e) {
+		  	    var evt = new MouseEvent("dblclick");
+		  	    e.dispatchEvent(evt);
+		  	  });
+		  	};
+		  	  
+		  	  
+		  	  d3.selectAll("g.node")
+		  	  .append("circle")
+		  	  .attr("r", function(d) {return radiusScale(d.depth)})
+		  	  .style("fill", function(d) {return colors(d.depth)})
+		  	  .append("text",function(d) {return d.name})
+		  	  
+
+		  	  d3.select("#svgOrbit").selectAll("circle.orbits")
+		  	  .data(orbit.orbitalRings())
+		  	  .enter()
+		  	  .insert("circle", "g")
+		  	  .attr("class", "ring")
+		  	  .attr("r", function(d) {return d.r})
+		  	  .attr("cx", function(d) {return d.x})
+		  	  .attr("cy", function(d) {return d.y})
+		  	  .style("fill", "none")
+		  	  .style("stroke", "black")
+		  	  .style("stroke-width", "1px")
+		  	  .style("stroke-opacity", .15)
+
+		  	  orbit.on("tick", function() {
+		  	    d3.selectAll("g.node")
+		  	      .attr("transform", function(d) {return "translate(" +d.x +"," + d.y+")"});
+
+		  	    d3.selectAll("circle.ring")
+		  	    .attr("cx", function(d) {return d.x})
+		  	    .attr("cy", function(d) {return d.y});
+		  	  });
+
+		  	  orbit.start();
+
+		  	  function nodeOver(d) {
+		  	    orbit.stop();
+		  	    d3.select(this).append("text").text(d.name).style("text-anchor", "middle").attr("y", 35);
+		  	    d3.select(this).select("circle").style("stroke", "black").style("stroke-width", 3);
+		  	  }
+
+		  	  function nodeOut() {
+		  	    orbit.start();
+		  	   // d3.selectAll("text").remove();
+		  	    d3.selectAll("g.node > circle").style("stroke", "none").style("stroke-width", 0);    
+		  	  }
+
+
+		  	}
+		  	$(function() {
+		  		makeViz();
+		  	});
+   		 </script>
+   		 
+		  </div>
+          <h2 align="center">Orbit Chart</h2>
+          <p>Returns a bar chart, supports direct and raw data format.</p>
+         </div><!-- panel-body -->
+         </div>
+        </div><!-- /.col-lg-5 -->
+         
+          <div class="col-lg-5"> 
+           <div class="twt-wrapper">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            Event Feed
+                        </div>
+                        <div class="panel-body">
+                            <hr />
+                            <ul class="media-list">
+                                <li class="media">
+                                    <a href="#" class="pull-left">
+                                        <img src="/static/img/1.png" alt="" class="img-circle">
+                                    </a>
+                                    <div class="media-body">
+                                        <span class="text-muted pull-right">
+                                            <small class="text-muted">30 min ago</small>
+                                        </span>
+                                        <strong class="text-success">@ Sarah</strong>
+                                        <p>
+                                            Laptop crashed for Sarah.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="media">
+                                    <a href="#" class="pull-left">
+                                        <img src="/static/img/2.png" alt="" class="img-circle">
+                                    </a>
+                                    <div class="media-body" id="seperation">
+                                        <span class="text-muted pull-right">
+                                            <small class="text-muted">30 min ago</small>
+                                        </span>
+                                        <strong class="text-success">@ John Doe</strong>
+                                        <p>
+                                            John has initiated a seperation process.
+                                        </p>
+                                    </div>
+                                    <script>
+                                    d3.select("#seperation")
+                                    .on('click', function(d){
+                                    	$("#llleave").d3Click();
+                                    })
+                                    jQuery.fn.d3Click = function () {
+                          		  	  this.each(function (i, e) {
+                          		  	    var evt = new MouseEvent("dblclick");
+                          		  	    e.dispatchEvent(evt);
+                          		  	  });
+                          		  	};
+                                    </script>
+                                </li>
+                                <li class="media">
+                                    <a href="#" class="pull-left">
+                                        <img src="/static/img/3.png" alt="" class="img-circle">
+                                    </a>
+                                    <div class="media-body">
+                                        <span class="text-muted pull-right">
+                                            <small class="text-muted">30 min ago</small>
+                                        </span>
+                                        <strong class="text-success">@ Facilities</strong>
+                                        <p>
+                                           Storm and flooding are expected in Chennai.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="media">
+                                    <a href="#" class="pull-left">
+                                        <img src="/static/img/5.png" alt="" class="img-circle">
+                                    </a>
+                                    <div class="media-body">
+                                        <span class="text-muted pull-right">
+                                            <small class="text-muted">30 min ago</small>
+                                        </span>
+                                        <strong class="text-success">@ Learning</strong>
+                                        <p>
+                                           IBM Webinar calendar announced for March.
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+                            <span class="text-danger">237 users active</span>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div >
+       </div>
+      </div>
+      </div><!-- /.row -->
+      </div>
+      <hr class="featurette-divider">
+      
+      <div class="row">
+        <div class="col-lg-7">
+          <div id=forcefieldchart >
+          
+		  	 <script type="text/javascript">
+		  	var width = 570,
+		    height = 375
+		  //Set up the colour scale
+		    var color = d3.scale.category20();
+
+		    
+		    //Added code here 
+		    
+		    //end of added code
+
+		var svg = d3.select("#forcefieldchart").append("svg")
+		    .attr("width", width)
+		    .attr("height", height);
+
+		var force = d3.layout.force()
+		    .gravity(0.05)
+		    .distance(100)
+		    .charge(-100)
+		    .size([width, height]);
+
+		d3.json("/static/graph.json", function(error, json) {
+		  if (error) throw error;
+
+		  force
+		      .nodes(json.nodes)
+		      .links(json.links)
+		      .start();
+
+		  var link = svg.selectAll(".link")
+		      .data(json.links)
+		    .enter().append("line")
+		      .attr("class", "link");
+
+		  var node = svg.selectAll(".node")
+		      .data(json.nodes)
+		       .enter().append("g")
+		      .attr("class", "node")
+		      .attr("id",function(d){return d.id})
+		      
+		       .call(force.drag)
+		      .on('dblclick', connectedNodes);
+		  
+		  	node.append("circle")
+     		 .attr("r", function(d){
+       			 return 5;
+     			 })
+      			.attr("fill", function(d) { return color(d.id); })
+
+		  /*  node.append("image")
+		      .attr("xlink:href", "https://github.com/favicon.ico")
+		      .attr("x", -8)
+		      .attr("y", -8)
+		      .attr("width", 16)
+		      .attr("height", 16);  */
+
+		  node.append("text")
+		      .attr("dx", 12)
+		      .attr("dy", ".35em")
+		      .text(function(d) { return d.name });
+		  
+		 
+		 	 
+
+		  force.on("tick", function() {
+			  
+//			console.log(node.text())
+			
+		    link.attr("x1", function(d) { return d.source.x; })
+		        .attr("y1", function(d) { return d.source.y; })
+		        .attr("x2", function(d) { return d.target.x; })
+		        .attr("y2", function(d) { return d.target.y; });
+
+		    node.attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
+		  });
+		  
+		//---Insert-------
+
+		//Toggle stores whether the highlighting is on
+		var toggle = 0;
+
+		//Create an array logging what is connected to what
+		var linkedByIndex = {};
+		for (i = 0; i < json.nodes.length; i++) {
+		    linkedByIndex[i + "," + i] = 1;
+		};
+		json.links.forEach(function (d) {
+		    linkedByIndex[d.source.index + "," + d.target.index] = 1;
+		});
+
+		//This function looks up whether a pair are neighbours  
+		function neighboring(a, b) {
+		    return linkedByIndex[a.index + "," + b.index];
+		}
+
+		function connectedNodes() {
+	
+
+		    if (toggle == 0) {
+		        //Reduce the opacity of all but the neighbouring nodes
+		        d = d3.select(this).node().__data__;
+		        node.style("opacity", function (o) {
+		            return neighboring(d, o) | neighboring(o, d) ? 1 : 0.1;
+		        });
+		        
+		        link.style("opacity", function (o) {
+		            return d.index==o.source.index | d.index==o.target.index ? 1 : 0.1;
+		        });
+		        
+		        //Reduce the op
+		       node.append("text")
+		      .attr("dx", 12)
+		      .attr("dy", ".35em")
+		      .text(function(d) { return d.name });
+		        
+		        toggle = 1;
+		    } else {
+		        //Put them back to opacity=1
+		        node.style("opacity", 1);
+		        link.style("opacity", 1);
+		        toggle = 0;
+		        
+				 node.append("text")
+			      .attr("dx", 12)
+			      .attr("dy", ".35em")
+			      .text(function(d) { return d.name });
+		    }
+		    
+		   
+		}
+
+		//---End Insert---
+		  
+		});
+    		 </script>
+		  </div>
+          <h2>Dependency Graph</h2>
+          <p>indicates the relationship among various entities</p>
+       
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+  
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+         <!--   <div id="splinechart" style="margin:20px;">
+		  	 <script type="text/javascript">
+			  	$(function() {
+	        		var data1 = '[{"iPhone":100,"Samsung":200,"Xperia":50,"Date":"Jan"},{"iPhone":120,"Samsung":220,"Xperia":60,"Date":"Feb"},{"iPhone":130,"Samsung":240,"Xperia":80,"Date":"Mar"},{"iPhone":160,"Samsung":280,"Xperia":100,"Date":"Apr"},{"iPhone":80,"Samsung":150,"Xperia":25,"Date":"May"},{"iPhone":120,"Samsung":210,"Xperia":55,"Date":"Jun"},{"iPhone":100,"Samsung":200,"Xperia":50,"Date":"Jul"},{"iPhone":120,"Samsung":220,"Xperia":60,"Date":"Aug"},{"iPhone":130,"Samsung":240,"Xperia":80,"Date":"Sep"},{"iPhone":160,"Samsung":280,"Xperia":100,"Date":"Oct"},{"iPhone":80,"Samsung":150,"Xperia":25,"Date":"Nov"},{"iPhone":120,"Samsung":210,"Xperia":55,"Date":"Dec"}]';
+	        		$.ajax({
+	                    type: "POST", dataType: "html",
+	                    url: "/ivaas/spline?xkey=Date&ykeys=iPhone,Samsung",
+	                    data: data1,
+	                    success: function( data ) {
+	                        $("#splinechart").html(data);
+	                    },
+	                    error: function (request, status, error) {
+	                        $("#splinechart").html(request.responseText);
+	                    }                   
+	                });        	
+	        	});
+    		 </script>
+		  </div>
+          <h2>spline</h2>
+          <p>Returns a cardinal line chart, supports only raw data format.</p>
+          <p><a class="btn btn-default" href="#" role="button">Customize &raquo;</a></p>
+          -->
+        </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
+
+      <hr class="featurette-divider">
+      
+      <div class="row">
+        <div class="col-lg-6">
+          <div id="worldmapchart" style="margin:20px;">
+		  	 <script type="text/javascript">
+	        	$(function() {
+	        		var data1 = '[{"iPhone":100,"Samsung":200,"Xperia":50,"Date":"Jan"},{"iPhone":120,"Samsung":220,"Xperia":60,"Date":"Feb"},{"iPhone":130,"Samsung":240,"Xperia":80,"Date":"Mar"},{"iPhone":160,"Samsung":280,"Xperia":100,"Date":"Apr"},{"iPhone":80,"Samsung":150,"Xperia":25,"Date":"May"},{"iPhone":120,"Samsung":210,"Xperia":55,"Date":"Jun"},{"iPhone":100,"Samsung":200,"Xperia":50,"Date":"Jul"},{"iPhone":120,"Samsung":220,"Xperia":60,"Date":"Aug"},{"iPhone":130,"Samsung":240,"Xperia":80,"Date":"Sep"},{"iPhone":160,"Samsung":280,"Xperia":100,"Date":"Oct"},{"iPhone":80,"Samsung":150,"Xperia":25,"Date":"Nov"},{"iPhone":120,"Samsung":210,"Xperia":55,"Date":"Dec"}]';
+	        		$.ajax({
+	                    type: "POST", dataType: "html",
+	                    url: "/ivaas/worldmap?country=india&term=population",
+	                    data: data1,
+	                    success: function( data ) {
+	                        $("#worldmapchart").html(data);
+	                    },
+	                    error: function (request, status, error) {
+	                        $("#worldmapchart").html(request.responseText);
+	                    }                   
+	                });     	
+	        	});
+    		 </script>
+		  </div>
+          <h2>worldmap</h2>
+          <p>Returns a worldmap chart, supports only raw data format.</p>
+          <p><a class="btn btn-default" href="#" role="button">Customize &raquo;</a></p>
+        </div>
+        <div class="col-lg-6">
+          <div id="usamapchart" style="margin:20px;">
+		  	 <script type="text/javascript">
+	        	$(function() {
+	        		var data1 = '[{"iPhone":100,"Samsung":200,"Xperia":50,"Date":"Jan"},{"iPhone":120,"Samsung":220,"Xperia":60,"Date":"Feb"},{"iPhone":130,"Samsung":240,"Xperia":80,"Date":"Mar"},{"iPhone":160,"Samsung":280,"Xperia":100,"Date":"Apr"},{"iPhone":80,"Samsung":150,"Xperia":25,"Date":"May"},{"iPhone":120,"Samsung":210,"Xperia":55,"Date":"Jun"},{"iPhone":100,"Samsung":200,"Xperia":50,"Date":"Jul"},{"iPhone":120,"Samsung":220,"Xperia":60,"Date":"Aug"},{"iPhone":130,"Samsung":240,"Xperia":80,"Date":"Sep"},{"iPhone":160,"Samsung":280,"Xperia":100,"Date":"Oct"},{"iPhone":80,"Samsung":150,"Xperia":25,"Date":"Nov"},{"iPhone":120,"Samsung":210,"Xperia":55,"Date":"Dec"}]';
+	        		$.ajax({
+	                    type: "POST", dataType: "html",
+	                    url: "/ivaas/usamap?country=india&term=population",
+	                    data: data1,
+	                    success: function( data ) {
+	                        $("#usamapchart").html(data);
+	                    },
+	                    error: function (request, status, error) {
+	                        $("#usamapchart").html(request.responseText);
+	                    }                   
+	                });     	
+	        	});
+    		 </script>
+		  </div>
+          <h2>usamap</h2>
+          <p>Returns a usa map chart, supports only raw data format.</p>
+          <p><a class="btn btn-default" href="#" role="button">Customize &raquo;</a></p>
+        </div>
+      </div><!-- /.row -->
+      
+      <hr class="featurette-divider">
+      
+      <!-- FOOTER -->
+      <footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>NSS Dashboard  &copy; IBM 2014</p>
+      </footer>
+
+    </div><!-- /.container -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    
+    
+  </body>
+</html>
