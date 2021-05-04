@@ -7,7 +7,7 @@ import os
 import sys
 import MySQLdb
 from flask_mysqldb import MySQL
-import mysql.connector
+#import mysql.connector
 import pytz
 utc=pytz.utc
 ist=pytz.timezone('Asia/Calcutta')
