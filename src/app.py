@@ -4,7 +4,6 @@ from werkzeug.utils import secure_filename
 from datetime import datetime
 import pandas as pd
 import os
-from datetime import datetime
 import sys
 import MySQLdb
 from flask_mysqldb import MySQL
