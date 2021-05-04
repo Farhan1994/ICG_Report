@@ -99,7 +99,7 @@ def icg():
             return render_template('icginfo.html', data = data)
         else:
             cursor = mysql.connection.cursor()
-            cursor.execute("SELECT name FROM PROFILE WHERE gid = %s",[un])
+            cursor.execute("SELECT name FROM profile WHERE gid = %s",[un])
             n = cursor.fetchone()
             cursor.close()
             cursor = mysql.connection.cursor()
@@ -134,7 +134,7 @@ def dashboard():
 @app.route("/timesheet/<int:gid>",methods=['GET'])
 def timesheet(gid):
     cursor = mysql.connection.cursor()
-    cursor.execute("SELECT name FROM PROFILE WHERE gid = %s",[gid])
+    cursor.execute("SELECT name FROM profile WHERE gid = %s",[gid])
     n = cursor.fetchone()
     cursor.close()
     cursor = mysql.connection.cursor()
